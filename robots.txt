@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gp20190917-beep.github.io/makaseru-ai-life/sitemap.xml
