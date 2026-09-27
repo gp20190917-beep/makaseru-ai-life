@@ -266,6 +266,25 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
 .tbl .yes{color:var(--indigo-deep);font-weight:700}
 .tbl .no{color:#B03A2E;font-weight:700}
 .finding .src{font-size:12.5px;color:var(--sub);margin:4px 0 0}
+/* 図のスタイル */
+.fig{margin:0 0 20px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px}
+.fig img{width:100%;height:auto;display:block;border-radius:6px}
+.fig figcaption{font-size:12.5px;color:var(--sub);margin-top:10px;line-height:1.65}
+.notice{
+  background:#FFF8EC;border:1px solid #F0DFAE;border-radius:10px;
+  padding:14px 18px;font-size:13px;color:#6B5A2E;margin:0 0 20px;
+}
+.notice b{color:#8A6410}
+.stepmini{margin:0 0 18px;padding:0;list-style:none;counter-reset:sm}
+.stepmini li{
+  position:relative;padding-left:34px;margin-bottom:10px;font-size:15px;counter-increment:sm;
+}
+.stepmini li::before{
+  content:counter(sm);position:absolute;left:0;top:1px;
+  width:22px;height:22px;border-radius:50%;background:var(--indigo);color:#fff;
+  font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
 @media (max-width:1040px){.navlinks{display:none}}
 
 /* reveal */
@@ -419,6 +438,65 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
           <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/secondbrain" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（セカンドブレイン）</a>と<a href="https://www.genspark.ai/helpcenter/ai-chat" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（AIチャット）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
         </div>
       </div>
+        <div class="finding reveal">
+          <p class="fno">その2</p>
+          <h3>エクセルの売上データをAIに読ませたら、「次に何を押すか」が分かるようになった</h3>
+          <p>もうひとつ、効果が大きかったのがこれです。私の勤め先のオンラインショップの売上データ——<strong>日付・商品名・価格・販売個数</strong>が入ったエクセルを、AIに読ませてまとめてもらっています。</p>
+          <p>対象は<strong>3年分</strong>です。<strong>2024年</strong>（まだ特に関わっていなかった年）、<strong>2025年</strong>（Instagramのリール動画を上げ始めた年）、そして<strong>2026年の今月まで</strong>。これを渡して、年次の推移・月別の売れ方・商品ごとの違いを並べてもらいました。</p>
+          <p><strong>手作業では、たぶんやりません。</strong>3年分を商品別に並べて、月ごとに比べて……という表を自分で作る手間を考えたら、最初から無理だと思っていました。AIに渡せば、その手間が丸ごと無くなります。</p>
+
+          <div class="notice">
+            <b>図について：</b>ここに載せている図は、説明のために作った<b>サンプルデータ（架空の商品・架空の数字）</b>です。実際の会社の売上は一切出していません。数字は違っても、<b>「見えるようになること」は同じ</b>だと思って読んでください。
+          </div>
+
+          <p><strong>分かったこと①　年ごとの推移が見える</strong></p>
+          <p>ただし、途中の年をそのまま比べてはいけません。<strong>2026年はまだ9月までしかない</strong>ので、いま並べると必ず少なく見えます。<strong>「同じ1〜9月どうし」で比べる</strong>——これに気づけるだけで、判断の精度が変わります。</p>
+          <figure class="fig">
+            <img src="sales/fig2_year.png" alt="同じ1〜9月で比べた年次の売上（サンプルデータ）" loading="lazy">
+            <figcaption>同じ「1〜9月」で切り出して比べる。途中の年は、そこまでで揃えないと意味がありません。<br>（サンプルデータ）</figcaption>
+          </figure>
+
+          <p><strong>分かったこと②　月ごとの「山」がある</strong></p>
+          <p>売上は1年を通して平らではありません。<strong>4〜5月と11〜12月に山</strong>が来て、<strong>8〜10月が谷</strong>になる。この形は、3年分を重ねると、はっきり見えてきます。</p>
+          <figure class="fig">
+            <img src="sales/fig1_monthly.png" alt="月別の売上推移（3年分・サンプルデータ）" loading="lazy">
+            <figcaption>3年分を重ねると、毎年同じところに山と谷が来ていることが分かる。<br>（サンプルデータ）</figcaption>
+          </figure>
+
+          <p><strong>分かったこと③　商品ごとに「売れる月」が、全然ちがう</strong></p>
+          <p>ここがいちばん面白いところでした。<strong>同じ店の商品でも、売れる季節はバラバラ</strong>です。同じ「冬」でも12月に集中するものと、1月まで伸びるものがある。<strong>季節商品は、上位3か月で年間の6〜8割を稼ぐ</strong>ものもありました。</p>
+          <figure class="fig">
+            <img src="sales/fig3_season.png" alt="商品ごとの月別構成比ヒートマップ（サンプルデータ）" loading="lazy">
+            <figcaption>各商品の3年合計を100としたときの、月ごとの割合。濃いところが「売れる月」。<br>（サンプルデータ）</figcaption>
+          </figure>
+
+          <p><strong>分かったこと④　いちばん効いたのは、ここでした</strong></p>
+          <p>まとめを見て、いちばん助かったのは数字そのものではなく、<strong>「次にどこへ手を入れるか」が決められるようになったこと</strong>です。月別の販売個数を見ると、こう判断できるようになりました👇</p>
+          <ul>
+            <li><strong>今月はこの商品を押す</strong>——もう売れ始めている月なので、広告や紹介をここに寄せる</li>
+            <li><strong>来月はこっちに切り替える</strong>——来月が山になる商品に、先に手を打つ</li>
+            <li><strong>この商品は今月は動かさない</strong>——谷の月に力を入れても、戻りが小さい</li>
+          </ul>
+          <p>商品の数が多いと、「なんとなく」で選ぶしかありませんでした。<strong>それが、月ごとの数字で選べるようになる。</strong>売上を上げる話というより、<strong>迷う時間を減らす話</strong>だと思っています。</p>
+
+          <p><strong>もうひとつ、2025年のリールとの重なり</strong></p>
+          <p>2025年にInstagramのリール動画を上げ始めていて、それが売上に影響したかどうかは、正直まだ分かりません。数字の上では<strong>リールを始めた時期と、伸びた時期が重なって見えます</strong>。</p>
+          <figure class="fig">
+            <img src="sales/fig4_reel.png" alt="リールを始めた前後の月あたり売上（サンプルデータ）" loading="lazy">
+            <figcaption>始める前と後で、1か月あたりの売上はどう変わったか。<br>（サンプルデータ）</figcaption>
+          </figure>
+          <p><strong>ただ、ここは慎重に書きます。</strong>時期が重なっているだけで、<strong>リールが原因だったとは言えません</strong>。同じ時期に値段も変えていれば、季節も動いています。<strong>「重なっている」までしか言えない</strong>——これが、AIに任せるときに私がいちばん気をつけているところです。<strong>AIは、聞けば何でもそれらしい理由を付けてくれます。</strong>因果を決めるのは、最後は人間です。</p>
+
+          <p><strong>頼み方は、これだけです</strong></p>
+          <ul class="stepmini">
+            <li>日付・商品名・価格・販売個数が入ったエクセルをそのまま渡す</li>
+            <li>「年ごとの推移」「月ごとの売れ方」「商品ごとの季節の違い」の3つを頼む</li>
+            <li>図にして出してもらう（数字の表より、図のほうが早く分かります）</li>
+            <li>「この商品は、何月に売れている？」と1つずつ聞いて、来月の準備に使う</li>
+          </ul>
+          <p>エクセルの作り方も、特別なことは要りません。<strong>ふだん売上管理で使っている表が、そのまま使えます。</strong></p>
+          <p class="src">※ 「同じ1〜9月で比べる」「相関と因果は別」の2点は、AIの答えをそのまま使わず、必ず自分で確かめてください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
     </div>
   </section>
 
