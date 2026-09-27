@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:670px;overflow:hidden}
+body{
+  background:#F7F7F4;color:#1A1D23;
+  font-family:"Noto Sans JP",sans-serif;
+  display:flex;align-items:stretch;
+}
+.left{
+  width:820px;padding:64px 56px 56px 64px;
+  display:flex;flex-direction:column;
+}
+.eyebrow{
+  font-family:"Space Grotesk",sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:.2em;color:#4C4AE4;text-transform:uppercase;
+}
+h1{
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;
+  font-size:62px;line-height:1.28;letter-spacing:.005em;margin-top:22px;
+}
+h1 em{
+  font-style:normal;color:#4C4AE4;
+  background:linear-gradient(transparent 60%,rgba(245,166,35,.5) 60%);
+}
+.sub{
+  margin-top:auto;font-size:23px;color:#5B6172;line-height:1.7;font-weight:500;
+}
+.brand{
+  margin-top:26px;display:flex;align-items:center;gap:12px;
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;
+}
+.dot{width:13px;height:13px;border-radius:50%;background:#F5A623;flex:none}
+.chip-un{
+  font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;
+  background:#1A1D23;color:#fff;border-radius:5px;padding:3px 9px;
+}
+.right{
+  width:460px;background:#221E5E;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;padding:54px 46px;
+}
+.right .cap{
+  font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.24em;color:rgba(255,255,255,.5);margin-bottom:26px;
+}
+.bars{display:flex;align-items:flex-end;gap:13px;height:250px}
+.bar{flex:1;border-radius:5px 5px 0 0;background:rgba(255,255,255,.22)}
+.bar.hi{background:#F5A623}
+.bar.mid{background:#7B78FF}
+.legend{margin-top:26px;font-size:15px;color:rgba(255,255,255,.72);line-height:1.9}
+.legend b{color:#F5A623}
+</style>
+</head>
+<body>
+  <div class="left">
+    <p class="eyebrow">Unofficial AI Work Log</p>
+    <h1>来月、<em>何を売るか</em>が<br>分かるようになった</h1>
+    <p class="sub">売上エクセル3年分をAIに読ませたら、<br>「なんとなく」で選ばなくなった話</p>
+    <div class="brand"><span class="dot"></span>まかせるAI生活<span class="chip-un">非公認</span></div>
+  </div>
+  <div class="right">
+    <p class="cap">MONTHLY SALES</p>
+    <div class="bars">
+      <div class="bar" style="height:46%"></div>
+      <div class="bar" style="height:36%"></div>
+      <div class="bar mid" style="height:58%"></div>
+      <div class="bar mid" style="height:64%"></div>
+      <div class="bar hi" style="height:82%"></div>
+      <div class="bar hi" style="height:100%"></div>
+      <div class="bar" style="height:52%"></div>
+      <div class="bar" style="height:44%"></div>
+    </div>
+    <div class="legend">山と谷が、毎年<b>同じところ</b>に来ている</div>
+  </div>
+</body>
+</html>
