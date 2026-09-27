@@ -241,6 +241,33 @@ article.note strong{color:var(--indigo-deep)}
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:12.5px;color:var(--sub)}
 footer .wrap p{margin-bottom:8px;max-width:52em}
 
+/* ---------- findings（使ってみて分かったこと） ---------- */
+.findings-grid{display:grid;gap:20px;margin-top:40px}
+.finding{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:clamp(22px,3vw,34px);
+}
+.finding .fno{
+  font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.16em;color:var(--spark);
+}
+.finding h3{
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;
+  font-size:clamp(19px,2.5vw,23px);line-height:1.5;margin:8px 0 18px;
+}
+.finding p{margin:0 0 16px;font-size:15px}
+.finding ul{margin:0 0 16px 1.2em}
+.finding li{margin-bottom:8px;font-size:15px}
+.finding strong{color:var(--indigo-deep)}
+.tbl-wrap{overflow-x:auto;margin:0 0 18px}
+.tbl{width:100%;min-width:420px;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border:1px solid var(--line);padding:10px 14px;text-align:left}
+.tbl th{background:var(--chipline);color:var(--indigo-deep);font-weight:700;font-size:13px}
+.tbl .yes{color:var(--indigo-deep);font-weight:700}
+.tbl .no{color:#B03A2E;font-weight:700}
+.finding .src{font-size:12.5px;color:var(--sub);margin:4px 0 0}
+@media (max-width:1040px){.navlinks{display:none}}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
 .reveal.on{opacity:1;transform:none}
@@ -273,6 +300,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
     <nav class="navlinks" aria-label="ページ内リンク">
       <a href="dekikoto-100.html"><strong>できること100</strong></a>
       <a href="#uses">できること</a>
+      <a href="#findings">分かったこと</a>
       <a href="#notes">使い方ノート</a>
       <a href="#start">はじめ方</a>
       <a href="#about">プロフィール</a>
@@ -353,6 +381,44 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
         </div>
       </div>
       <p class="micro uses-note reveal">依頼文は「◯◯を作って／して」だけでOK。書き方のコツは<a href="#note-1" style="color:var(--indigo);font-weight:700">使い方ノート①</a>で解説しています。</p>
+    </div>
+  </section>
+
+  <!-- ============ 使ってみて分かったこと ============ -->
+  <section id="findings">
+    <div class="wrap">
+      <p class="eyebrow reveal">From my own use</p>
+      <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">使ってみて、分かったこと</h2>
+      <p class="sec-lead reveal">公式の説明を読むだけでは分かりにくいところを、実際に使いながら確かめた記録です。1つずつ増やしていきます。</p>
+      <div class="findings-grid">
+        <div class="finding reveal">
+          <p class="fno">その1</p>
+          <h3>「新しいチャットを開くたび、はじめまして」を卒業する——AIの記憶の話</h3>
+          <p>Gensparkを使い始めて最初につまずくのが、実はここです。<strong>チャットを変えると、さっき説明したことを覚えていない。</strong>同じ背景説明を何度も書き直す。これが面倒で、せっかくの道具から離れてしまう——そういう人が多いはずです。</p>
+          <p><strong>公式の答えははっきりしています。</strong>チャットをまたいだ記憶を担当するのは<strong>セカンドブレイン</strong>という機能です。大事なのは「どのチャットで効くか」が決まっていることです。</p>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th>場所</th><th>チャットをまたぐ記憶</th></tr></thead>
+              <tbody>
+                <tr><td>スーパーエージェント（セカンドブレイン接続時）</td><td class="yes">効きます</td></tr>
+                <tr><td>Hubの中のプロジェクト同士</td><td class="yes">効きます</td></tr>
+                <tr><td>通常のAIチャット</td><td class="no">効きません</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>ここが落とし穴です。<strong>通常のAIチャットは、仕様として覚えない</strong>と公式ヘルプに明記されています。ただし、チャット自体は「プロジェクト」として保存されるので、消えるわけではありません。<strong>覚えているかどうかと、残っているかどうかは別の話</strong>です。</p>
+          <p><strong>設定は5分で終わります。</strong></p>
+          <ul>
+            <li>セカンドブレインのページを開く</li>
+            <li><strong>メールかカレンダーを1つだけ</strong>つなぐ</li>
+            <li>あとはいつもどおり、スーパーエージェントに指示する</li>
+          </ul>
+          <p>最初から全部つながなくて大丈夫です。公式も「まずはメールかカレンダーを1つ」と案内しています。<strong>無料プランから使えます。</strong>会議の音声を拾う専用の機器もありますが、それは無くても使えます。</p>
+          <!-- ▼ 春夏秋さんの実体験を1〜2文、ここに入れる -->
+          <p><strong>50代の立場で言うと、ここの効果がいちばん大きいと思います。</strong>説明する手間は、慣れていない人ほど重くのしかかります。「覚えてもらうために毎回説明する」——その負担が、先に消えるからです。</p>
+          <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/secondbrain" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（セカンドブレイン）</a>と<a href="https://www.genspark.ai/helpcenter/ai-chat" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（AIチャット）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+      </div>
     </div>
   </section>
 
