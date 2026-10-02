@@ -249,6 +249,15 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
 .log-item p{margin:0;font-size:14.5px;line-height:1.9;color:var(--muted,#4b5563)}
 .log-item strong{color:var(--ink,#111827)}
 @media(max-width:640px){.log-item{grid-template-columns:1fr;gap:12px}.log-date{justify-self:start}}
+/* ---------- noteの記事 ---------- */
+.np-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:40px}
+.np-card{display:block;background:var(--card,#fff);border:1px solid var(--line,#e7e7e2);border-radius:16px;padding:20px 22px;text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease}
+.np-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(27,42,74,.10)}
+.np-date{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--indigo);margin:0 0 8px}
+.np-card h3{margin:0 0 10px;font-size:16.5px;font-weight:800;line-height:1.55}
+.np-card p{margin:0;font-size:14px;line-height:1.85;color:var(--muted,#4b5563)}
+.np-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:800;color:var(--indigo)}
+.sns-btn.note .ic{background:#2CB696}
 /* ---------- findings（使ってみて分かったこと） ---------- */
 .findings-grid{display:grid;gap:20px;margin-top:40px}
 .finding{
@@ -329,6 +338,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
       <a href="#uses">できること</a>
       <a href="#findings">分かったこと</a>
       <a href="#log">プチ発見ログ</a>
+      <a href="#note-posts">note記事</a>
       <a href="#notes">使い方ノート</a>
       <a href="#start">はじめ方</a>
       <a href="#about">プロフィール</a>
@@ -919,15 +929,57 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
     </div>
   </section>
 
+  <!-- ============ noteの記事 ============ -->
+  <section id="note-posts">
+    <div class="wrap">
+      <p class="eyebrow reveal">On note</p>
+      <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">noteで書いた記事</h2>
+      <p class="sec-lead reveal">サイトより一歩踏み込んだ、実際の画面と数字の記録です。無料・登録なしで読めます。</p>
+      <div class="np-grid">
+        <a class="np-card reveal" href="https://note.com/makaseru_ai50/n/n70b72b58771b" target="_blank" rel="noopener">
+          <p class="np-date">2026.10.02</p>
+          <h3>GrokがXの投稿に強い理由は？</h3>
+          <p>強いのは腕前の差ではなく「立っている場所」の差でした。他のAIでXを読んでみた結果も書いています。</p>
+          <span class="np-more">noteで読む →</span>
+        </a>
+        <a class="np-card reveal" href="https://note.com/makaseru_ai50/n/n01a54192c6a6" target="_blank" rel="noopener">
+          <p class="np-date">2026.10.02</p>
+          <h3>リール動画は、構成も概要欄もAIに任せていました</h3>
+          <p>2025年から続けているInstagramリール。どこを任せて、何が変わったかの記録です。</p>
+          <span class="np-more">noteで読む →</span>
+        </a>
+        <a class="np-card reveal" href="https://note.com/makaseru_ai50/n/ndebf413a5bf9" target="_blank" rel="noopener">
+          <p class="np-date">2026.09.30</p>
+          <h3>9月18日から、Gensparkのクレジットの使い方が変わっていた</h3>
+          <p>追加された「無料利用枠」の中身と、画面に実際に出ていた数字（85%残り／今週15%使用済み）。</p>
+          <span class="np-more">noteで読む →</span>
+        </a>
+        <a class="np-card reveal" href="https://note.com/makaseru_ai50/n/n4e7dae6cf0cf" target="_blank" rel="noopener">
+          <p class="np-date">2026.09.30</p>
+          <h3>売上エクセルをAIに読ませたら「次は何を売るか」が分かった</h3>
+          <p>3年分の売上データを渡して見えてきたこと。図はサンプルデータで作っています。</p>
+          <span class="np-more">noteで読む →</span>
+        </a>
+        <a class="np-card reveal" href="https://note.com/makaseru_ai50/n/n389116cd34ec" target="_blank" rel="noopener">
+          <p class="np-date">2026.09.28</p>
+          <h3>GensparkにOpus 5.5が入っていたので、倍率を確かめた</h3>
+          <p>モデル一覧の倍率は5x→4xに。ただし私の契約では、まだ関係のない話でした。</p>
+          <span class="np-more">noteで読む →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SNS ============ -->
   <section id="sns">
     <div class="wrap">
       <p class="eyebrow reveal">Follow</p>
       <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">SNSでも発信しています</h2>
-      <p class="sec-lead reveal">サイトの記事をXではスレッドに、Instagramではカルーセルにまとめて配信していきます。</p>
+      <p class="sec-lead reveal">サイトの記事をXではスレッドに、Instagramではカルーセルにまとめて配信しています。長めの記録はnoteに書いています。</p>
       <div class="sns-row reveal">
         <a class="sns-btn" href="https://twitter.com/YibcfG1BFv5h28F" target="_blank" rel="noopener" title="X：まかせるAI生活"><span class="ic"></span>X（まかせるAI生活）</a>
         <a class="sns-btn ig" href="https://www.instagram.com/makaseru.ai50/" target="_blank" rel="noopener" title="Instagram：まかせるAI生活"><span class="ic"></span>Instagram（まかせるAI生活）</a>
+        <a class="sns-btn note" href="https://note.com/makaseru_ai50" target="_blank" rel="noopener" title="note：まかせるAI生活"><span class="ic"></span>note（まかせるAI生活）</a>
       </div>
     </div>
   </section>
