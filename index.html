@@ -241,6 +241,14 @@ article.note strong{color:var(--indigo-deep)}
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:12.5px;color:var(--sub)}
 footer .wrap p{margin-bottom:8px;max-width:52em}
 
+/* ---------- プチ発見ログ ---------- */
+.log-list{display:grid;gap:14px;margin-top:40px}
+.log-item{display:grid;grid-template-columns:108px 1fr;gap:22px;align-items:start;background:var(--card,#fff);border:1px solid var(--line,#e7e7e2);border-radius:16px;padding:20px 22px}
+.log-date{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--indigo);background:rgba(99,102,241,.08);border-radius:999px;padding:6px 10px;text-align:center;white-space:nowrap}
+.log-item h3{margin:0 0 8px;font-size:16.5px;font-weight:800;line-height:1.5}
+.log-item p{margin:0;font-size:14.5px;line-height:1.9;color:var(--muted,#4b5563)}
+.log-item strong{color:var(--ink,#111827)}
+@media(max-width:640px){.log-item{grid-template-columns:1fr;gap:12px}.log-date{justify-self:start}}
 /* ---------- findings（使ってみて分かったこと） ---------- */
 .findings-grid{display:grid;gap:20px;margin-top:40px}
 .finding{
@@ -320,6 +328,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
       <a href="dekikoto-100.html"><strong>できること100</strong></a>
       <a href="#uses">できること</a>
       <a href="#findings">分かったこと</a>
+      <a href="#log">プチ発見ログ</a>
       <a href="#notes">使い方ノート</a>
       <a href="#start">はじめ方</a>
       <a href="#about">プロフィール</a>
@@ -497,6 +506,54 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
           <p>エクセルの作り方も、特別なことは要りません。<strong>ふだん売上管理で使っている表が、そのまま使えます。</strong></p>
           <p class="src">※ 「同じ1〜9月で比べる」「相関と因果は別」の2点は、AIの答えをそのまま使わず、必ず自分で確かめてください。当サイトはGensparkの非公式ファンメディアです。</p>
         </div>
+    </div>
+  </section>
+
+
+  <!-- ============ プチ発見ログ ============ -->
+  <section id="log">
+    <div class="wrap">
+      <p class="eyebrow reveal">Small findings</p>
+      <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">プチ発見ログ</h2>
+      <p class="sec-lead reveal">長い記事にはならないけれど、残しておきたい小さな発見です。実際に試して、確かめたものだけを書いています。</p>
+      <div class="log-list">
+        <div class="log-item reveal">
+          <span class="log-date">2026.10.02</span>
+          <div>
+            <h3>AIの答えは、1件だけ間違っていた</h3>
+            <p>Grokに「いまの話題」を聞いて、そのまま記事に載せようとしました。載せる前に1件ずつ確かめたところ、<strong>野球の本塁打の話が1件だけ、2023年の試合のもの</strong>でした。残りの3件は正しかった。誤りを見つけて消すのに、かかった時間は数分です。<strong>AIは速いですが、確かめる手間まで消してはくれません。</strong></p>
+          </div>
+        </div>
+        <div class="log-item reveal">
+          <span class="log-date">2026.10.02</span>
+          <div>
+            <h3>Xの返信やメンションは、外のAIからは読めなかった</h3>
+            <p>公開されているプロフィールページは、他のAIでも読めました。ところが、<strong>返信やメンションの一覧</strong>を取ろうとすると「private beta」という表示で止まりました。<strong>読める範囲と読めない範囲は、はっきり分かれています。</strong></p>
+          </div>
+        </div>
+        <div class="log-item reveal">
+          <span class="log-date">2026.10.02</span>
+          <div>
+            <h3>日付と時刻を指定すると、答えが変わる</h3>
+            <p>「いま（10月2日21時台）の話題」と指定して聞いたら、<strong>時刻つきで返ってきました。</strong>指定しないと、いつの話か分からない答えが混ざります。ひとこと添えるだけで、使える答えになります。</p>
+          </div>
+        </div>
+        <div class="log-item reveal">
+          <span class="log-date">2026.09.30</span>
+          <div>
+            <h3>無料利用枠は、画面でこう出ていた</h3>
+            <p><strong>85%残り／今週15%使用済み／5日15時間後にリセット。</strong>「7日ごと」という仕様が、実物で確認できました。月額クレジットとは別の枠です。</p>
+          </div>
+        </div>
+        <div class="log-item reveal">
+          <span class="log-date">2026.09.30</span>
+          <div>
+            <h3>クレジットの実数</h3>
+            <p>利用可能<strong>8,312</strong>／使用済み<strong>3,327</strong>。請求サイクルは9月14日〜10月14日でした。「クレジット不要の特典」として、AIチャット2通・AI画像32枚が<strong>別枠</strong>で表示されていました。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src" style="margin-top:22px">※ ここに書いているのは、実際に試した結果です。AIの出力は、そのまま載せず、1件ずつ確かめてから書いています。当サイトはGensparkの非公式ファンメディアです。</p>
     </div>
   </section>
 
