@@ -241,6 +241,23 @@ article.note strong{color:var(--indigo-deep)}
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:12.5px;color:var(--sub)}
 footer .wrap p{margin-bottom:8px;max-width:52em}
 
+/* ---------- 気になって、聞いてみた ---------- */
+.qa-list{display:grid;gap:20px;margin-top:40px}
+.qa-item{background:var(--card,#fff);border:1px solid var(--line,#e7e7e2);border-left:4px solid var(--indigo);border-radius:16px;padding:24px 26px}
+.qa-meta{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--indigo);margin:0 0 10px}
+.qa-item h3{margin:0 0 18px;font-size:17.5px;font-weight:800;line-height:1.55}
+.qa-label{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--sub,#6b7280);margin:0 0 8px}
+.qa-quotes{margin:0 0 20px;padding:14px 18px;list-style:none;background:rgba(99,102,241,.06);border-radius:12px}
+.qa-quotes li{position:relative;padding-left:15px;font-size:14.5px;line-height:1.85;color:var(--ink,#111827)}
+.qa-quotes li+li{margin-top:6px}
+.qa-quotes li:before{content:"「";position:absolute;left:0;color:var(--indigo);font-weight:800}
+.qa-quotes li:after{content:"」";color:var(--indigo);font-weight:800}
+.qa-answer p{margin:0 0 14px;font-size:15px;line-height:1.95}
+.qa-answer strong{color:var(--indigo-deep)}
+.qa-answer ul{margin:0 0 14px 1.2em}
+.qa-answer li{margin-bottom:8px;font-size:15px;line-height:1.85}
+.qa-answer .tbl-wrap{margin:0 0 18px}
+@media(max-width:640px){.qa-item{padding:20px 18px}}
 /* ---------- プチ発見ログ ---------- */
 .log-list{display:grid;gap:14px;margin-top:40px}
 .log-item{display:grid;grid-template-columns:108px 1fr;gap:22px;align-items:start;background:var(--card,#fff);border:1px solid var(--line,#e7e7e2);border-radius:16px;padding:20px 22px}
@@ -338,6 +355,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
       <a href="#uses">できること</a>
       <a href="#findings">分かったこと</a>
       <a href="#log">プチ発見ログ</a>
+      <a href="#questions">気になって聞いてみた</a>
       <a href="#note-posts">note記事</a>
       <a href="#notes">使い方ノート</a>
       <a href="#start">はじめ方</a>
@@ -616,6 +634,51 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
         </div>
       </div>
       <p class="src" style="margin-top:22px">※ ここに書いているのは、実際に試した結果です。AIの出力は、そのまま載せず、1件ずつ確かめてから書いています。当サイトはGensparkの非公式ファンメディアです。</p>
+    </div>
+  </section>
+
+  <!-- ============ 気になって、聞いてみた ============ -->
+  <section id="questions">
+    <div class="wrap">
+      <p class="eyebrow reveal">Things I looked up</p>
+      <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">気になって、聞いてみた</h2>
+      <p class="sec-lead reveal">分からない名前が出てきたとき、そのままにせず聞いています。聞いた言葉をそのまま残して、返ってきた答えを分かりやすくまとめました。</p>
+      <div class="qa-list">
+        <div class="qa-item reveal">
+          <p class="qa-meta">2026.10.04 ／ その1</p>
+          <h3>「Genspark Code みたいな Windows アプリ」は、実は別の名前でした</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>genspark Code みたいな Windows アプリ、出たよね</li>
+            <li>GenCode と genspark Code、両方あるの？違いは？</li>
+            <li>何となくカッコいいから GenCode 触りたい。素人でもできるんでしょ</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>出ています。ただし、名前が違います。</strong>「Genspark Code」ではなく、<strong>GenCode（ジェンコード）</strong>です。公式ヘルプのFAQにも「<strong>別物です</strong>」とはっきり書かれています。名前が似ているので、まずここで一度つまずきます。</p>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead><tr><th></th><th>Genspark Code</th><th>GenCode</th></tr></thead>
+                <tbody>
+                  <tr><td>何をする</td><td>文章からアプリを丸ごと作る</td><td>自分のPCのフォルダのコードを触る</td></tr>
+                  <tr><td>どこで動く</td><td>ブラウザ</td><td>アプリの画面／黒い画面（CLI）</td></tr>
+                  <tr><td>向いている人</td><td>コードを書きたくない人</td><td>自分のファイルを触りたい人</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>GenCode の入口は、2つあります。</strong></p>
+            <ul>
+              <li><strong>アプリの画面（Super App）</strong>…チャットで話す感覚。素人はこちら。</li>
+              <li><strong>黒い画面（CLI）</strong>…コマンドを打つ。開発者向け。</li>
+            </ul>
+            <p>どちらも中身は同じエージェントで、できることも同じです。</p>
+            <p><strong>Windows でも使えます。</strong>Super App は macOS・Windows・Linux 向けに、無料でダウンロードできます（Mac版だけは Apple Silicon が必要です）。</p>
+            <p><strong>料金は、Genspark のクレジットから。</strong>別の契約は要りません。ただし「無料利用枠」の対象ではなく、クレジットが直接減ります。</p>
+            <p><strong>使えるモデルは9種類。</strong>Claude・GPT・Gemini・DeepSeek・GLM・MiniMax・Kimi・Grok・Nemotron が、1つの中に入っています。ChatGPT を別に契約しなくても、GPT系のモデルでコードを書かせられる、ということです。</p>
+            <p><strong>素人目線でいちばん助かるのは、これでした。</strong>分からなくなったら、<strong>GenCode 自身にエラー文を貼って「直して」と言えば、直してくれます。</strong>つまずく場所は、だいたいそこで通ります。</p>
+          </div>
+          <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+      </div>
     </div>
   </section>
 
