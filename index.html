@@ -83,7 +83,7 @@ a{color:inherit;text-decoration:none}
   background:rgba(247,247,244,.88);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
-.nav{display:flex;align-items:center;gap:26px;height:62px}
+.nav{display:flex;align-items:center;gap:20px;min-height:62px;flex-wrap:wrap;padding:11px 0}
 .brand{
   font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:16.5px;
   display:flex;align-items:center;gap:8px;white-space:nowrap;
@@ -98,8 +98,12 @@ a{color:inherit;text-decoration:none}
   color:#B87700;border:1px solid var(--spark);border-radius:5px;padding:1px 7px;
 }
 @media (max-width:880px){.chip-tag{display:none}}
-.navlinks{display:flex;gap:22px;margin-left:auto;font-size:13.5px;font-weight:500}
-.navlinks a:hover{color:var(--indigo)}
+.navlinks{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto}
+.navlinks a{display:inline-block;font-size:12.5px;font-weight:700;line-height:1;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;transition:background .15s,color .15s,border-color .15s,transform .15s}
+.navlinks a:hover{background:var(--chipline);border-color:var(--indigo);color:var(--indigo-deep);transform:translateY(-1px)}
+.navlinks a strong{font-weight:900}
+.navlinks a:first-child{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.navlinks a:first-child:hover{background:var(--indigo-deep);border-color:var(--indigo-deep);color:#fff}
 .nav .btn{margin-left:6px}
 
 /* ---------- hero ---------- */
@@ -557,6 +561,10 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
           <h3>GrokがXに強いのは、性能ではなく「立っている場所」の差だった</h3>
           <p>「GrokはXの投稿を拾うのがうまい」——これは、性能の差だと思っていました。調べたら、違いました。</p>
           <p><strong>Grokは、Xと同じ会社の中にいます。</strong>だから、検索の入口が内側にある。他のAIは、外から見に行っています。同じ「検索」でも、立場が違う。それだけのことでした。</p>
+            <figure class="fig">
+              <img src="img/grok.png" alt="GrokはXの中にいて、他のAIは外から見に行く" loading="lazy">
+              <figcaption>GrokはXの中、他のAIは外から。同じ「検索」でも、立ち位置が違う。</figcaption>
+            </figure>
           <p>2026年2月、SpaceXがxAIを買収しました。そのあと7月に、GrokとXとデータセンターをSpaceXへ統合して、社名は<strong>SpaceXAI</strong>に変わっています。</p>
           <p><strong>では、他のAIはXを見られないのか。</strong>ここは正確に書いておきます。見られないのではなく、<strong>読みにくい</strong>というのが正しいところです。私も、他のAIでXのプロフィールページを開いて、投稿を読むことができました。</p>
           <p>ただし、限界がありました。<strong>返信やメンションの一覧</strong>を読む機能は、私の環境ではまだ開放されていませんでした（「private beta」という表示で止まりました）。</p>
@@ -664,6 +672,10 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
               <li>GenTeam で「ローカルエージェント」を作り、使うランタイム（Codex）を選ぶ</li>
               <li>あとはチャンネルやDMで、ふつうのエージェントと同じように話しかける</li>
             </ul>
+            <figure class="fig">
+              <img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy">
+              <figcaption>このチャットには入っていない。GenTeam で自分のPCのCodexをつなげられる。</figcaption>
+            </figure>
             <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
             <p><strong>④ 必要なもの。</strong>ChatGPTの有料プラン（Plus / Pro など）でサインインするか、OpenAIのAPIキー（使った分だけの支払い）のどちらかです。どちらも無い、という状態では動きません。</p>
             <p><strong>⑤ ただし、ここからが本題です。</strong>「Codexを使いたいだけ」なら、<strong>Gensparkを挟まず、Codexを直接使うのが正解</strong>でした。GenTeamを通すと、PCをつけっぱなしにしておく必要があり、セットアップの手間も増えます。<strong>コーディングの体験そのものは、良くなりません。</strong></p>
@@ -699,6 +711,10 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
                 </tbody>
               </table>
             </div>
+            <figure class="fig">
+              <img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy">
+              <figcaption>名前は似ているが、動く場所も用途も別。GenCode の入口はアプリと黒い画面の2つ。</figcaption>
+            </figure>
             <p><strong>GenCode の入口は、2つあります。</strong></p>
             <ul>
               <li><strong>アプリの画面（Super App）</strong>…チャットで話す感覚。素人はこちら。</li>
