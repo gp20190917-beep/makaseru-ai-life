@@ -245,6 +245,8 @@ article.note strong{color:var(--indigo-deep)}
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:12.5px;color:var(--sub)}
 footer .wrap p{margin-bottom:8px;max-width:52em}
 
+.qa-grp{font-size:13.5px;font-weight:900;color:#fff;background:var(--indigo-deep);border-radius:999px;padding:7px 20px;justify-self:start;margin:18px 0 2px;letter-spacing:.06em}
+.qa-grp small{font-weight:700;opacity:.85;font-size:11.5px;margin-left:8px}
 /* ---------- よくある質問 ---------- */
 .faq-list{display:grid;gap:11px;margin-top:40px}
 details.faq{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
@@ -843,7 +845,86 @@ details.faq[open] summary:after{content:"\FF0D"}
           </div>
           <p class="src">※ Codexの対応プランは公式の料金表で、GenCodeの料金は<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。無料枠には上限があります。当サイトはGensparkの非公式ファンメディアです。</p>
         </div>
-      </div>
+      
+        <p class="qa-grp reveal">シリーズ：Gensparkの正体 <small>聞いた言葉から、中身を確かめていく</small></p>
+
+        <div class="qa-item reveal">
+          <p class="qa-meta">2026.09 ／ その6</p>
+          <h3>「あなたは、Gensparkじゃなかった」——私が最初に勘違いしていたこと</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>あなたは、今Claudですね、　俺は、それをわかっていなかった、ジェンスパークだと思っているから</li>
+            <li>クロードコードだと？</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>これを知ったとき、少し恥ずかしかったです。</strong>私は「Genspark」という1つのAIと話していると思っていました。違いました。</p>
+            <p><strong>Gensparkは、AIそのものではなく「器（うつわ）」です。</strong>入口は1つ。でも、中で働いているモデルは1つではありません。Claude（Anthropic）・GPT（OpenAI）・Gemini（Google）・Grok（xAI）など、<strong>複数の会社のモデルが、場面や時期によって入れ替わります。</strong></p>
+            
+            <figure class="fig">
+              <img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy">
+              <figcaption>Gensparkは器。中で働くモデルは、1つではありません。</figcaption>
+            </figure>
+            <p><strong>だから、混乱するんです。</strong>昨日はClaudeだったのに、今日は別のモデル。同じモデルでも、道具（エージェント）が違えば結果も違う。<strong>「同じGensparkなのに、答えの癖が違う」</strong>と感じたら、それは気のせいではありません。</p>
+            <p><strong>私の使い方が、これで変わりました。</strong>「Gensparkがやってくれる」と考えるのをやめて、<strong>「この作業は、どのモデルに頼むか」</strong>を意識するようになりました。50代には関係のない話に見えますが、<strong>ここを知らないと、ずっとモヤモヤしたまま使うことになります。</strong></p>
+          </div>
+          <p class="src">※ 使えるモデルは、契約と時期で変わります。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+
+        <div class="qa-item reveal">
+          <p class="qa-meta">2026.09 ／ その7</p>
+          <h3>「契約したのに、できないと言われた」——できる／できないの分かれ目</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>あなたは、AIエージェントでしょ　なのに、ココナラに入力とかも任せたいと思って契約したのにできないの？</li>
+            <li>出来るとか言ってたから契約したのに　ログインする時に許可する感じでもできんのか</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>これは、私がいちばん期待して、いちばん裏切られたところです。</strong>「AIに任せれば、面倒な入力も消える」と思っていました。</p>
+            <p><strong>分かれ目は、シンプルでした。</strong></p>
+            <ul>
+              <li><strong>できる</strong>：公開されているページ、API（外部から使える窓口）があるサービス、<strong>自分のPCの中のファイル</strong></li>
+              <li><strong>できない</strong>：<strong>ログインが必要なサイトの、内側の操作</strong>（フォーム入力、出品、投稿の確定など）</li>
+            </ul>
+            <p><strong>理由は、能力ではなく、許可です。</strong>ログインの壁の向こうは、<strong>そのサイトの規約とセキュリティの世界</strong>です。AIが勝手に入って操作する、というのは、<strong>技術の問題というより、許されていない</strong>からできません。</p>
+            <p><strong>だから、「ログインして入力して」は、今のところ頼めません。</strong>ここを期待して契約すると、必ずがっかりします。<strong>私がそうでした。</strong></p>
+            <p><strong>では、何が任せられるのか。</strong>下ごしらえです。<strong>文面を考え、整え、コピーできる形にする</strong>——ここは任せられます。<strong>最後の「貼って、送る」だけが、私の手元に残ります。</strong>これが分かってから、道具としての満足度はむしろ上がりました。</p>
+          </div>
+          <p class="src">※ 対応範囲は、サービスの規約と提供状況で変わります。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+
+        <div class="qa-item reveal">
+          <p class="qa-meta">2026.08-09 ／ その8</p>
+          <h3>「無料と書いてあるが、どこまで無料か」——「無料」が、3つありました</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>ジェンスパークのプラン購入するとAIチャットは無料とあるが、どこまで無料か</li>
+            <li>ここで質問したらクレジットは？</li>
+            <li>ジェンスパークはまだわからないことがあってクレジット無くなるから使いにくい</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>「無料」と書いてあるのに、クレジットが減る。</strong>これが、最初にいちばん混乱したところでした。理由は、<strong>「無料」が3つあるから</strong>です。</p>
+            
+            <figure class="fig">
+              <img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy">
+              <figcaption>「無料」の言葉が3つ。指しているものが、それぞれ違いました。</figcaption>
+            </figure>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead><tr><th>呼び名</th><th>中身</th><th>使うとどうなる</th></tr></thead>
+                <tbody>
+                  <tr><td>月額クレジット</td><td>有料プランについてくる分</td><td>減って、補充される</td></tr>
+                  <tr><td>無料利用枠</td><td>7日ごとに戻る分</td><td>Standardモードで使える</td></tr>
+                  <tr><td>コアモデルの特典</td><td>9月18日より前からの契約者</td><td>12月31日まで、AIチャットが0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>ここを分けると、すっと通ります。</strong>私の場合は③に当てはまっていたので、<strong>AIチャットではクレジットが減っていませんでした。</strong>減っていたのは、<strong>別の作業（GenCode・画像・スライドなど）</strong>です。</p>
+            <p><strong>「使いにくい」の正体は、これでした。</strong>減る／減らないが、<strong>作業の種類で変わる</strong>のに、同じ「無料」という言葉で説明されていた。<strong>言葉が同じで、中身が違う。</strong>だから、分からなくなっていました。</p>
+          </div>
+          <p class="src">※ 料金と枠は変わることがあります。必ず公式サイトの最新情報をご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+
+</div>
     </div>
   </section>
 
