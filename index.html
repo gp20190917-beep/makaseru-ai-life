@@ -687,7 +687,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
             <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
             <p>この「クレジットの落とし穴」は、<a href="#log-6" style="color:var(--indigo);font-weight:700">プチ発見ログ</a>にも書きました。</p>
             <p><strong>※ ただし、条件が1つあります。</strong>これは<strong>「自分のPCで動かす」</strong>場合の話です。GenTeamでエージェントを作るとき、既定では<strong>Gensparkのクラウド</strong>で動く方が選ばれます。そちらは、ふつうにクレジットを使います。<strong>「どこで動かすか」で、財布が変わります。</strong></p>
-            <p><strong>④ 必要なもの。</strong>ChatGPTの有料プラン（Plus / Pro など）でサインインするか、OpenAIのAPIキー（使った分だけの支払い）のどちらかです。どちらも無い、という状態では動きません。</p>
+            <p><strong>④ 必要なもの。</strong>ChatGPTの有料プラン（Plus / Pro など）でサインインするか、OpenAIのAPIキー（使った分だけの支払い）のどちらかです。どちらも無い、という状態では動きません。<a href="#q-routes" style="color:var(--indigo);font-weight:700">ChatGPT契約なしで使える道</a>もあります。</p>
             <p><strong>⑤ ただし、ここからが本題です。</strong>「Codexを使いたいだけ」なら、<strong>Gensparkを挟まず、Codexを直接使うのが正解</strong>でした。GenTeamを通すと、PCをつけっぱなしにしておく必要があり、セットアップの手間も増えます。<strong>コーディングの体験そのものは、良くなりません。</strong></p>
             <p><strong>⑥ では、挟む価値が出るのは、どんなときか。</strong></p>
             <ul>
@@ -792,6 +792,39 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
             <p><strong>1つだけ、忘れないでください。</strong>「減らない」のは<strong>Gensparkのクレジット</strong>の話です。<strong>タダではありません。</strong>頭脳の代金は、<strong>自分のChatGPTの契約から</strong>出ています。払う先が変わっただけで、誰かは払っています。</p>
           </div>
           <p class="src">※ 「自分のPCで動かす」と「クラウドで動かす」では、使うアカウントが変わります。最新は<a href="https://www.genspark.ai/helpcenter/genteam" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenTeam）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+
+        <div class="qa-item reveal" id="q-routes">
+          <p class="qa-meta">2026.10.04 ／ その5</p>
+          <h3>「ChatGPT契約なしで動くんじゃなかった？」——動きます。ただし、それは別の道具でした</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>え？　ChatGPT契約なしで、動くようなこと言ってなかったか？</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>その通りです。契約なしで動く道は、ちゃんとあります。</strong>ここで混ざりやすいのが、<strong>「Codex」と「GenCode」は、別の会社の道具</strong>だという点です。誰の道具かで、払う先が決まります。</p>
+            <figure class="fig">
+              <img src="img/routes.png" alt="ChatGPT契約なしで使えるのは、CodexのAPIキー方式とGenCodeの2つ" loading="lazy">
+              <figcaption>「契約なし」で使えるのは、右の2つ。<strong>誰の道具か</strong>で、払う先が決まります。</figcaption>
+            </figure>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead><tr><th>ルート</th><th>ChatGPT契約</th><th>何で払う</th></tr></thead>
+                <tbody>
+                  <tr><td>Codex ＋ ChatGPT契約</td><td class="no">必要</td><td>ChatGPTの契約</td></tr>
+                  <tr><td><strong>Codex ＋ APIキー</strong></td><td class="yes">不要</td><td>使った分だけ（従量課金）</td></tr>
+                  <tr><td><strong>GenCode</strong>（Gensparkの道具）</td><td class="yes">不要</td><td>Gensparkのクレジット</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>整理すると、こうなります。</strong></p>
+            <ul>
+              <li><strong>Codexは、OpenAIの道具。</strong>だから、OpenAIへ払います。契約でも、APIキーでも、<strong>どちらでも使えます</strong></li>
+              <li><strong>GenCodeは、Gensparkの道具。</strong>だから、<strong>ChatGPT契約は要りません。</strong>Gensparkのクレジットで動きます。GPT系のモデルも中に入っています</li>
+            </ul>
+            <p><strong>覚え方は、これだけです。</strong>「<strong>誰の道具か</strong>」で、払う先が決まる。<strong>道具が違えば、財布も違う。</strong>——この一件で、いちばん繰り返し出てきた話でした。</p>
+          </div>
+          <p class="src">※ GenCode が使うモデルと料金は、<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
         </div>
       </div>
     </div>
