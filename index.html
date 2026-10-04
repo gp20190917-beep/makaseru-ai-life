@@ -640,6 +640,14 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
             <p>利用可能<strong>8,312</strong>／使用済み<strong>3,327</strong>。請求サイクルは9月14日〜10月14日でした。「クレジット不要の特典」として、AIチャット2通・AI画像32枚が<strong>別枠</strong>で表示されていました。</p>
           </div>
         </div>
+
+        <div class="log-item reveal" id="log-6">
+          <span class="log-date">2026.10.04</span>
+          <div>
+            <h3>GenTeamのエージェントは、既定だとクレジットを使う側だった</h3>
+            <p>GenTeamのエージェントは、どこで動かすかを選べます。<strong>自分のPC</strong>で動かすなら、動くのは自分のPCと自分の契約なので、<strong>Gensparkのクレジットは減りません</strong>。ところが、<strong>何も選ばなければクラウド</strong>になります。そちらは、ふつうにクレジットを使います。<strong>「どこで動かすか」で、財布が変わる。</strong>公式ヘルプの表を読むまで、ここに気づきませんでした。</p>
+          </div>
+        </div>
       </div>
       <p class="src" style="margin-top:22px">※ ここに書いているのは、実際に試した結果です。AIの出力は、そのまま載せず、1件ずつ確かめてから書いています。当サイトはGensparkの非公式ファンメディアです。</p>
     </div>
@@ -677,6 +685,7 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
               <figcaption>このチャットには入っていない。GenTeam で自分のPCのCodexをつなげられる。</figcaption>
             </figure>
             <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
+            <p>この「クレジットの落とし穴」は、<a href="#log-6" style="color:var(--indigo);font-weight:700">プチ発見ログ</a>にも書きました。</p>
             <p><strong>※ ただし、条件が1つあります。</strong>これは<strong>「自分のPCで動かす」</strong>場合の話です。GenTeamでエージェントを作るとき、既定では<strong>Gensparkのクラウド</strong>で動く方が選ばれます。そちらは、ふつうにクレジットを使います。<strong>「どこで動かすか」で、財布が変わります。</strong></p>
             <p><strong>④ 必要なもの。</strong>ChatGPTの有料プラン（Plus / Pro など）でサインインするか、OpenAIのAPIキー（使った分だけの支払い）のどちらかです。どちらも無い、という状態では動きません。</p>
             <p><strong>⑤ ただし、ここからが本題です。</strong>「Codexを使いたいだけ」なら、<strong>Gensparkを挟まず、Codexを直接使うのが正解</strong>でした。GenTeamを通すと、PCをつけっぱなしにしておく必要があり、セットアップの手間も増えます。<strong>コーディングの体験そのものは、良くなりません。</strong></p>
@@ -728,6 +737,28 @@ footer .wrap p{margin-bottom:8px;max-width:52em}
             <p><strong>素人目線でいちばん助かるのは、これでした。</strong>分からなくなったら、<strong>GenCode 自身にエラー文を貼って「直して」と言えば、直してくれます。</strong>つまずく場所は、だいたいそこで通ります。</p>
           </div>
           <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
+        </div>
+
+        <div class="qa-item reveal">
+          <p class="qa-meta">2026.10.04 ／ その3</p>
+          <h3>「自分のPCで動かす」って、パソコンにAIを入れるの？——入るのは「小さな道具」だけでした</h3>
+          <p class="qa-label">実際に聞いた言葉</p>
+          <ul class="qa-quotes">
+            <li>自分のPCで動かすってことは、自分のパソコンにAIを入れるのか？</li>
+            <li>かなりのデータ量になるよね？</li>
+          </ul>
+          <div class="qa-answer">
+            <p><strong>いいえ、AIそのものは入りません。</strong>ここは、いちばん誤解されやすいところだと思います。</p>
+            <p><strong>PCに入るのは、「指示を出す小さな道具」だけです。</strong>Codex CLI や Claude Code は、<strong>数十MBほどの軽いプログラム</strong>です。パソコンに何GBも落ちてくる、ということはありません。</p>
+            <p><strong>AIの本体（モデル）は、クラウドの中にいます。</strong>あなたのパソコンがやるのは「どのファイルを読むか」「何を実行するか」という<strong>手足の仕事</strong>で、考えるのは<strong>ネットの向こう</strong>です。</p>
+            <figure class="fig">
+              <img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy">
+              <figcaption>PCに入るのは「道具」だけ。頭脳（モデル）は、クラウドにいます。</figcaption>
+            </figure>
+            <p><strong>では、データ量の心配は無いのか。</strong>「パソコンの容量」については、心配いりません。<strong>ただし別の意味で、覚えておくことがあります。</strong>作業の途中で、<strong>あなたのコードの中身が、ネットを通ってクラウドへ送られます</strong>。ここが、容量ではなく<strong>「中身を見せてよいか」</strong>という話になります。<strong>会社の売上表や、お客様の情報が入ったフォルダを触らせるなら、ここは先に確認しておくべきところです。</strong></p>
+            <p><strong>補足：自分で「ローカルのAI」を入れる道もあります。</strong>Ollama や LM Studio という道具を使うと、<strong>AIの本体そのものを自分のPCに置けます</strong>。この場合は、たしかに<strong>数GB〜20GB以上</strong>になります。ただし、Codex や Claude Code は、<strong>それを必要としません</strong>。ふつうに使うだけなら、入れるのは道具だけです。</p>
+          </div>
+          <p class="src">※ 仕様は変わることがあります。最新は<a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">Codex CLI 公式ドキュメント</a>と<a href="https://www.genspark.ai/helpcenter/genteam" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenTeam）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
         </div>
       </div>
     </div>
