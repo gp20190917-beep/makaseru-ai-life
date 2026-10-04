@@ -9,7 +9,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<noscript><style>.reveal{opacity:1;transform:none}.chips .chip{opacity:1;transform:none}</style></noscript>
+<noscript><style>.reveal{opacity:1;transform:none}.chips .chip{opacity:1;transform:none}/* ---------- 文字サイズを読みやすく ---------- */
+.sec-lead{font-size:16.5px}
+.finding p{font-size:16.5px;line-height:1.95}
+.finding li{font-size:16.5px;line-height:1.9}
+.finding .src{font-size:13.5px}
+.qa-answer p{font-size:16.5px;line-height:2}
+.qa-answer li{font-size:16.5px;line-height:1.95}
+.qa-quotes li{font-size:16px;line-height:1.95}
+.log-item p{font-size:16px;line-height:1.95}
+.faq-body{font-size:16.2px}
+.qa-toc li{font-size:15.5px}
+.tbl{font-size:15.5px}
+.tbl th{font-size:14.5px}
+details.qa-item summary .qa-h{font-size:18px}
+details.faq summary{font-size:16.5px}
+.np-card p{font-size:15.5px}
+.finding h3{font-size:18px}
+.qa-item h3{font-size:18.5px}
+details.finding{padding:0;overflow:hidden}
+details.finding summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;flex-direction:column;gap:9px}
+details.finding summary::-webkit-details-marker{display:none}
+details.finding summary .fno{margin:0}
+details.finding summary .qa-h{font-size:18.5px;font-weight:800;line-height:1.55;padding-right:34px;position:relative;display:block}
+details.finding summary .qa-h:after{content:"\FF0B";position:absolute;right:-8px;top:-2px;color:var(--indigo);font-weight:900;font-size:18px}
+details.finding[open] summary{background:var(--chipline)}
+details.finding[open] summary .qa-h:after{content:"\FF0D"}
+.fd-toc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin-top:34px}
+.fd-toc .tt{font-size:13px;font-weight:900;color:#fff;background:var(--indigo);border-radius:999px;padding:5px 16px;display:inline-block;margin-bottom:14px;letter-spacing:.06em}
+.fd-toc ol{margin:0;padding-left:1.4em}
+.fd-toc li{margin-bottom:9px;font-size:15.5px;line-height:1.7}
+.fd-toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.fd-toc a:hover{color:var(--indigo);text-decoration:underline}
+.fd-toc .d{color:var(--sub);font-size:12.3px;font-weight:800;margin-right:7px}
+</style></noscript>
 <style>
 :root{
   --paper:#F7F7F4;
@@ -485,11 +518,22 @@ details.faq[open] summary:after{content:"\FF0D"}
       <p class="eyebrow reveal">From my own use</p>
       <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">使ってみて、分かったこと</h2>
       <p class="sec-lead reveal">公式の説明を読むだけでは分かりにくいところを、実際に使いながら確かめた記録です。1つずつ増やしていきます。</p>
+            <nav class="fd-toc reveal" aria-label="分かったことの目次">
+        <span class="tt">目次</span>
+        <ol>
+          <li><a href="#f1"><span class="d">その1</span>「新しいチャットを開くたび、はじめまして」を卒業する——AIの記憶の話</a></li> 
+          <li><a href="#f2"><span class="d">その2</span>エクセルの売上データをAIに読ませたら、「次は何を売るか」が分かるようになった</a></li> 
+          <li><a href="#f3"><span class="d">その3</span>リール動画は、「どこで何を見せるか」を任せると撮るだけになる</a></li> 
+          <li><a href="#f4"><span class="d">その4</span>GrokがXに強いのは、性能ではなく「立っている場所」の差だった</a></li> 
+          <li><a href="#f5"><span class="d">その5</span>モデルの倍率が5xから4xに下がっていた——でも、私にはまだ関係がなかった</a></li>
+        </ol>
+      </nav>
       <div class="findings-grid">
-        <div class="finding reveal">
-          <p class="fno">その1</p>
-          <h3>「新しいチャットを開くたび、はじめまして」を卒業する——AIの記憶の話</h3>
-          <p>Gensparkを使い始めて最初につまずくのが、実はここです。<strong>チャットを変えると、さっき説明したことを覚えていない。</strong>同じ背景説明を何度も書き直す。これが面倒で、せっかくの道具から離れてしまう——そういう人が多いはずです。</p>
+        
+        <details class="finding reveal" id="f1" open>
+          <summary><span class="fno">その1</span><span class="qa-h">「新しいチャットを開くたび、はじめまして」を卒業する——AIの記憶の話</span></summary>
+          <div class="qa-inner">
+            <p>Gensparkを使い始めて最初につまずくのが、実はここです。<strong>チャットを変えると、さっき説明したことを覚えていない。</strong>同じ背景説明を何度も書き直す。これが面倒で、せっかくの道具から離れてしまう——そういう人が多いはずです。</p>
           <p><strong>公式の答えははっきりしています。</strong>チャットをまたいだ記憶を担当するのは<strong>セカンドブレイン</strong>という機能です。大事なのは「どのチャットで効くか」が決まっていることです。</p>
           <div class="tbl-wrap">
             <table class="tbl">
@@ -512,12 +556,13 @@ details.faq[open] summary:after{content:"\FF0D"}
           <p><strong>私の場合、「Genspark AI ワークスペース 6.0」を使うようになってから、長い説明を書かなくなりました。</strong>ひととおり簡単に伝えたら、あとは探してきてもらう。以前は、探し方まで自分で言葉にしていたのが、そこが要らなくなった——これが実感としていちばん大きいところです。</p>
           <p>50代にとっては、この差が効きます。書く量が減ると、頼むまでの腰が軽くなる。<strong>「説明するのが面倒だから使わない」が「ひとこと言ってみようか」に変わる</strong>のが、道具が身につくかどうかの分かれ目だと思っています。</p>
           <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/secondbrain" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（セカンドブレイン）</a>と<a href="https://www.genspark.ai/helpcenter/ai-chat" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（AIチャット）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
+          </div>
+        </details>
 
-        <div class="finding reveal">
-          <p class="fno">その2</p>
-          <h3>エクセルの売上データをAIに読ませたら、「次は何を売るか」が分かるようになった</h3>
-          <p>もうひとつ、効果が大きかったのがこれです。私の勤め先のオンラインショップの売上データ——<strong>日付・商品名・価格・販売個数</strong>が入ったエクセルを、AIに読ませてまとめてもらっています。</p>
+        <details class="finding reveal" id="f2">
+          <summary><span class="fno">その2</span><span class="qa-h">エクセルの売上データをAIに読ませたら、「次は何を売るか」が分かるようになった</span></summary>
+          <div class="qa-inner">
+            <p>もうひとつ、効果が大きかったのがこれです。私の勤め先のオンラインショップの売上データ——<strong>日付・商品名・価格・販売個数</strong>が入ったエクセルを、AIに読ませてまとめてもらっています。</p>
           <p>対象は<strong>3年分</strong>です。<strong>2024年</strong>（まだ特に関わっていなかった年）、<strong>2025年</strong>（Instagramのリール動画を上げ始めた年）、そして<strong>2026年の今月まで</strong>。これを渡して、年次の推移・月別の売れ方・商品ごとの違いを並べてもらいました。</p>
           <p><strong>手作業では、たぶんやりません。</strong>3年分を商品別に並べて、月ごとに比べて……という表を自分で作る手間を考えたら、最初から無理だと思っていました。AIに渡せば、その手間が丸ごと無くなります。</p>
 
@@ -572,12 +617,13 @@ details.faq[open] summary:after{content:"\FF0D"}
           </ul>
           <p>エクセルの作り方も、特別なことは要りません。<strong>ふだん売上管理で使っている表が、そのまま使えます。</strong></p>
           <p class="src">※ 「同じ1〜9月で比べる」「相関と因果は別」の2点は、AIの答えをそのまま使わず、必ず自分で確かめてください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
+          </div>
+        </details>
 
-        <div class="finding reveal">
-          <p class="fno">その3</p>
-          <h3>リール動画は、「どこで何を見せるか」を任せると撮るだけになる</h3>
-          <p>私がいちばんAIを使っていたのは、実は動画づくりでした。<strong>Instagramのリール動画</strong>です。2025年から上げ始めて、いまも続けています。その作り方で、いちばん助かっているのは<strong>「構成」と「概要欄」</strong>の2つです。</p>
+        <details class="finding reveal" id="f3">
+          <summary><span class="fno">その3</span><span class="qa-h">リール動画は、「どこで何を見せるか」を任せると撮るだけになる</span></summary>
+          <div class="qa-inner">
+            <p>私がいちばんAIを使っていたのは、実は動画づくりでした。<strong>Instagramのリール動画</strong>です。2025年から上げ始めて、いまも続けています。その作り方で、いちばん助かっているのは<strong>「構成」と「概要欄」</strong>の2つです。</p>
           <p><strong>私がやっていたのは、これだけです。</strong></p>
           <ul>
             <li>商品や季節から、ざっくりしたイメージを書いて渡す</li>
@@ -589,15 +635,16 @@ details.faq[open] summary:after{content:"\FF0D"}
           <p>概要欄も同じでした。<strong>毎回30分ほど悩んでいた</strong>のが、いまは出てきたものを少し直すだけです。</p>
           <p>「ちゃんとした台本を書いてから頼もう」と考えなくて大丈夫でした。<strong>ざっくりでいい。</strong>返ってきたものを見て「ここをこう」と直すほうが、早いです。</p>
           <p class="src">※ 構成と概要欄は任せていますが、撮影・編集・公開の判断は自分でしています。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
+          </div>
+        </details>
 
-        <div class="finding reveal">
-          <p class="fno">その4</p>
-          <h3>GrokがXに強いのは、性能ではなく「立っている場所」の差だった</h3>
-          <p>「GrokはXの投稿を拾うのがうまい」——これは、性能の差だと思っていました。調べたら、違いました。</p>
+        <details class="finding reveal" id="f4">
+          <summary><span class="fno">その4</span><span class="qa-h">GrokがXに強いのは、性能ではなく「立っている場所」の差だった</span></summary>
+          <div class="qa-inner">
+            <p>「GrokはXの投稿を拾うのがうまい」——これは、性能の差だと思っていました。調べたら、違いました。</p>
           <p><strong>Grokは、Xと同じ会社の中にいます。</strong>だから、検索の入口が内側にある。他のAIは、外から見に行っています。同じ「検索」でも、立場が違う。それだけのことでした。</p>
             <figure class="fig">
-              <img src="img/grok.png" alt="GrokはXの中にいて、他のAIは外から見に行く" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/grok-m.png"><img src="img/grok.png" alt="GrokはXの中にいて、他のAIは外から見に行く" loading="lazy"></picture>
               <figcaption>GrokはXの中、他のAIは外から。同じ「検索」でも、立ち位置が違う。</figcaption>
             </figure>
           <p>2026年2月、SpaceXがxAIを買収しました。そのあと7月に、GrokとXとデータセンターをSpaceXへ統合して、社名は<strong>SpaceXAI</strong>に変わっています。</p>
@@ -610,12 +657,13 @@ details.faq[open] summary:after{content:"\FF0D"}
           </ul>
           <p>優劣ではなく、置き場所の話です。</p>
           <p class="src">※ 買収・社名変更は2026年2月と7月の公式発表にもとづきます。他社AIの欄は一般的な傾向で、機能が追加されれば変わります。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
+          </div>
+        </details>
 
-        <div class="finding reveal">
-          <p class="fno">その5</p>
-          <h3>モデルの倍率が5xから4xに下がっていた——でも、私にはまだ関係がなかった</h3>
-          <p>Gensparkのモデル一覧に、<strong>Claude Opus 5.5</strong>が入っていました。「New」が付いていて、すでに選ばれた状態です。名前の横の数字は<strong>クレジットの消費倍率</strong>を示すもので、こうなっていました。</p>
+        <details class="finding reveal" id="f5">
+          <summary><span class="fno">その5</span><span class="qa-h">モデルの倍率が5xから4xに下がっていた——でも、私にはまだ関係がなかった</span></summary>
+          <div class="qa-inner">
+            <p>Gensparkのモデル一覧に、<strong>Claude Opus 5.5</strong>が入っていました。「New」が付いていて、すでに選ばれた状態です。名前の横の数字は<strong>クレジットの消費倍率</strong>を示すもので、こうなっていました。</p>
           <ul>
             <li>Claude Opus 5.5（New）… <strong>4x</strong></li>
             <li>Claude Opus 5 … 5x</li>
@@ -627,7 +675,9 @@ details.faq[open] summary:after{content:"\FF0D"}
           <p>つまり、画面に4xと出ていても、私には請求されていません。<strong>測る対象が、そもそも存在しなかった</strong>ということです。</p>
           <p>倍率の話が効いてくるのは<strong>2027年1月1日から</strong>です。だから今やるべきことは、倍率をにらむことではなく、<strong>任せ方のほうを確かめておくこと</strong>だと思っています。どの作業なら丸ごと渡せるのか。うまくいかないときに、どう言い直すのか。それを体で覚えておけば、無料で使える期間が終わったあとも、同じ仕事を少ないクレジットで回せます。</p>
           <p class="src">※ 画面で見た倍率と、公式ヘルプの記載にもとづきます。性能の感想は書いていません（まだ試していないため）。仕様は変わることがあります。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
+          </div>
+        </details>
+>
       </div>
     </div>
   </section>
@@ -729,7 +779,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               <li>あとはチャンネルやDMで、ふつうのエージェントと同じように話しかける</li>
             </ul>
             <figure class="fig">
-              <img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/codex-m.png"><img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy"></picture>
               <figcaption>このチャットには入っていない。GenTeam で自分のPCのCodexをつなげられる。</figcaption>
             </figure>
             <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
@@ -771,7 +821,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               </table>
             </div>
             <figure class="fig">
-              <img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/gencode-m.png"><img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy"></picture>
               <figcaption>名前は似ているが、動く場所も用途も別。GenCode の入口はアプリと黒い画面の2つ。</figcaption>
             </figure>
             <p><strong>GenCode の入口は、2つあります。</strong></p>
@@ -802,7 +852,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>PCに入るのは、「指示を出す小さな道具」だけです。</strong>Codex CLI や Claude Code は、<strong>数十MBほどの軽いプログラム</strong>です。パソコンに何GBも落ちてくる、ということはありません。</p>
             <p><strong>AIの本体（モデル）は、クラウドの中にいます。</strong>あなたのパソコンがやるのは「どのファイルを読むか」「何を実行するか」という<strong>手足の仕事</strong>で、考えるのは<strong>ネットの向こう</strong>です。</p>
             <figure class="fig">
-              <img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/local-m.png"><img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy"></picture>
               <figcaption>PCに入るのは「道具」だけ。頭脳（モデル）は、クラウドにいます。</figcaption>
             </figure>
             <p><strong>では、データ量の心配は無いのか。</strong>「パソコンの容量」については、心配いりません。<strong>ただし別の意味で、覚えておくことがあります。</strong>作業の途中で、<strong>あなたのコードの中身が、ネットを通ってクラウドへ送られます</strong>。ここが、容量ではなく<strong>「中身を見せてよいか」</strong>という話になります。<strong>会社の売上表や、お客様の情報が入ったフォルダを触らせるなら、ここは先に確認しておくべきところです。</strong></p>
@@ -827,7 +877,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               <li><strong>頭脳（モデル）＝クラウド</strong>：考える。これは、どのやり方でも変わりません</li>
             </ul>
             <figure class="fig">
-              <img src="img/pay.png" alt="手足はPC、頭脳はクラウド。クラウドの代金を誰が払うかでクレジットが変わる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/pay-m.png"><img src="img/pay.png" alt="手足はPC、頭脳はクラウド。クラウドの代金を誰が払うかでクレジットが変わる" loading="lazy"></picture>
               <figcaption>分かれ目は「どこで動くか」ではなく、<strong>「その代金を誰が払うか」</strong>でした。</figcaption>
             </figure>
             <p><strong>だから、答えはこうなります。</strong>クラウドで動いていても、<strong>その代金を自分が払っていれば、Gensparkのクレジットは減りません。</strong></p>
@@ -857,11 +907,11 @@ details.faq[open] summary:after{content:"\FF0D"}
           <div class="qa-answer">
             <p><strong>その通りでした。しかも、私の見立てより、条件はもっと緩いものでした。</strong>ChatGPTの<strong>無料プランでも、Codexは使えます</strong>（公式の料金表に「Codex／無料版／上限あり」と載っています）。<strong>つまり、追加の契約は要りません。</strong></p>
             <figure class="fig">
-              <img src="img/free.png" alt="GensparkのクレジットもOpenAIの料金も0でCodexが動く" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/free-m.png"><img src="img/free.png" alt="GensparkのクレジットもOpenAIの料金も0でCodexが動く" loading="lazy"></picture>
               <figcaption>自分のPCで動かし、無料プランの範囲で使うなら——<strong>追加の契約は、要りません。</strong></figcaption>
             </figure>
             <figure class="fig">
-              <img src="img/routes.png" alt="ChatGPT契約なしで使えるルート" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/routes-m.png"><img src="img/routes.png" alt="ChatGPT契約なしで使えるルート" loading="lazy"></picture>
               <figcaption>「契約なし」で使える道は、いくつもあります。<strong>誰の道具か</strong>で、払う先が決まります。</figcaption>
             </figure>
             <div class="tbl-wrap">
@@ -896,7 +946,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>Gensparkは、AIそのものではなく「器（うつわ）」です。</strong>入口は1つ。でも、中で働いているモデルは1つではありません。Claude（Anthropic）・GPT（OpenAI）・Gemini（Google）・Grok（xAI）など、<strong>複数の会社のモデルが、場面や時期によって入れ替わります。</strong></p>
             
             <figure class="fig">
-              <img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/identity1-m.png"><img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy"></picture>
               <figcaption>Gensparkは器。中で働くモデルは、1つではありません。</figcaption>
             </figure>
             <p><strong>だから、混乱するんです。</strong>昨日はClaudeだったのに、今日は別のモデル。同じモデルでも、道具（エージェント）が違えば結果も違う。<strong>「同じGensparkなのに、答えの癖が違う」</strong>と感じたら、それは気のせいではありません。</p>
@@ -942,7 +992,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>「無料」と書いてあるのに、クレジットが減る。</strong>これが、最初にいちばん混乱したところでした。理由は、<strong>「無料」が3つあるから</strong>です。</p>
             
             <figure class="fig">
-              <img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/free3-m.png"><img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy"></picture>
               <figcaption>「無料」の言葉が3つ。指しているものが、それぞれ違いました。</figcaption>
             </figure>
             <div class="tbl-wrap">
@@ -989,7 +1039,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               <li>あとはチャンネルやDMで、ふつうのエージェントと同じように話しかける</li>
             </ul>
             <figure class="fig">
-              <img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/codex-m.png"><img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy"></picture>
               <figcaption>このチャットには入っていない。GenTeam で自分のPCのCodexをつなげられる。</figcaption>
             </figure>
             <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
@@ -1030,7 +1080,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               </table>
             </div>
             <figure class="fig">
-              <img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/gencode-m.png"><img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy"></picture>
               <figcaption>名前は似ているが、動く場所も用途も別。GenCode の入口はアプリと黒い画面の2つ。</figcaption>
             </figure>
             <p><strong>GenCode の入口は、2つあります。</strong></p>
@@ -1060,7 +1110,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>PCに入るのは、「指示を出す小さな道具」だけです。</strong>Codex CLI や Claude Code は、<strong>数十MBほどの軽いプログラム</strong>です。パソコンに何GBも落ちてくる、ということはありません。</p>
             <p><strong>AIの本体（モデル）は、クラウドの中にいます。</strong>あなたのパソコンがやるのは「どのファイルを読むか」「何を実行するか」という<strong>手足の仕事</strong>で、考えるのは<strong>ネットの向こう</strong>です。</p>
             <figure class="fig">
-              <img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/local-m.png"><img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy"></picture>
               <figcaption>PCに入るのは「道具」だけ。頭脳（モデル）は、クラウドにいます。</figcaption>
             </figure>
             <p><strong>では、データ量の心配は無いのか。</strong>「パソコンの容量」については、心配いりません。<strong>ただし別の意味で、覚えておくことがあります。</strong>作業の途中で、<strong>あなたのコードの中身が、ネットを通ってクラウドへ送られます</strong>。ここが、容量ではなく<strong>「中身を見せてよいか」</strong>という話になります。<strong>会社の売上表や、お客様の情報が入ったフォルダを触らせるなら、ここは先に確認しておくべきところです。</strong></p>
@@ -1084,7 +1134,7 @@ details.faq[open] summary:after{content:"\FF0D"}
               <li><strong>頭脳（モデル）＝クラウド</strong>：考える。これは、どのやり方でも変わりません</li>
             </ul>
             <figure class="fig">
-              <img src="img/pay.png" alt="手足はPC、頭脳はクラウド。クラウドの代金を誰が払うかでクレジットが変わる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/pay-m.png"><img src="img/pay.png" alt="手足はPC、頭脳はクラウド。クラウドの代金を誰が払うかでクレジットが変わる" loading="lazy"></picture>
               <figcaption>分かれ目は「どこで動くか」ではなく、<strong>「その代金を誰が払うか」</strong>でした。</figcaption>
             </figure>
             <p><strong>だから、答えはこうなります。</strong>クラウドで動いていても、<strong>その代金を自分が払っていれば、Gensparkのクレジットは減りません。</strong></p>
@@ -1113,11 +1163,11 @@ details.faq[open] summary:after{content:"\FF0D"}
           <div class="qa-answer">
             <p><strong>その通りでした。しかも、私の見立てより、条件はもっと緩いものでした。</strong>ChatGPTの<strong>無料プランでも、Codexは使えます</strong>（公式の料金表に「Codex／無料版／上限あり」と載っています）。<strong>つまり、追加の契約は要りません。</strong></p>
             <figure class="fig">
-              <img src="img/free.png" alt="GensparkのクレジットもOpenAIの料金も0でCodexが動く" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/free-m.png"><img src="img/free.png" alt="GensparkのクレジットもOpenAIの料金も0でCodexが動く" loading="lazy"></picture>
               <figcaption>自分のPCで動かし、無料プランの範囲で使うなら——<strong>追加の契約は、要りません。</strong></figcaption>
             </figure>
             <figure class="fig">
-              <img src="img/routes.png" alt="ChatGPT契約なしで使えるルート" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/routes-m.png"><img src="img/routes.png" alt="ChatGPT契約なしで使えるルート" loading="lazy"></picture>
               <figcaption>「契約なし」で使える道は、いくつもあります。<strong>誰の道具か</strong>で、払う先が決まります。</figcaption>
             </figure>
             <div class="tbl-wrap">
@@ -1152,7 +1202,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>Gensparkは、AIそのものではなく「器（うつわ）」です。</strong>入口は1つ。でも、中で働いているモデルは1つではありません。Claude（Anthropic）・GPT（OpenAI）・Gemini（Google）・Grok（xAI）など、<strong>複数の会社のモデルが、場面や時期によって入れ替わります。</strong></p>
             
             <figure class="fig">
-              <img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/identity1-m.png"><img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy"></picture>
               <figcaption>Gensparkは器。中で働くモデルは、1つではありません。</figcaption>
             </figure>
             <p><strong>だから、混乱するんです。</strong>昨日はClaudeだったのに、今日は別のモデル。同じモデルでも、道具（エージェント）が違えば結果も違う。<strong>「同じGensparkなのに、答えの癖が違う」</strong>と感じたら、それは気のせいではありません。</p>
@@ -1196,7 +1246,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>「無料」と書いてあるのに、クレジットが減る。</strong>これが、最初にいちばん混乱したところでした。理由は、<strong>「無料」が3つあるから</strong>です。</p>
             
             <figure class="fig">
-              <img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy">
+              <picture><source media="(max-width:640px)" srcset="img/free3-m.png"><img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy"></picture>
               <figcaption>「無料」の言葉が3つ。指しているものが、それぞれ違いました。</figcaption>
             </figure>
             <div class="tbl-wrap">
