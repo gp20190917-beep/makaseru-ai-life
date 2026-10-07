@@ -206,6 +206,18 @@ section:first-of-type{border-top:none}
   font-size:17.5px;line-height:1.55;margin:10px 0 12px;
 }
 .uses-note{margin-top:22px}
+/* 六つの例：コピーして使える依頼文カード */
+.task .fhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.task .cat{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:16.5px}
+.task .cat::before{content:"●";color:var(--spark);font-size:10px;margin-right:7px;vertical-align:2px}
+.fbadge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.fbadge.none{background:#ececef;color:var(--sub)}
+.fbadge.opt{background:rgba(76,74,228,.09);color:var(--indigo)}
+.fbadge.req{background:rgba(245,166,35,.18);color:#8a5d00}
+.pbox{background:rgba(76,74,228,.06);border-left:4px solid var(--indigo);border-radius:0 10px 10px 0;padding:12px 14px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:15px;line-height:1.8;margin:12px 0 10px}
+.pbox .fill{background:rgba(245,166,35,.3);border-radius:4px;padding:0 3px;font-weight:700}
+.task .out{font-size:13px;color:var(--sub);line-height:1.65;margin:0}
+.task .out b{color:#1A1D23}
 
 /* note cards + articles */
 .notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
@@ -480,40 +492,40 @@ details.faq[open] summary:after{content:"\FF0D"}
     <div class="wrap">
       <p class="eyebrow reveal">What you can hand over</p>
       <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">その依頼文、まるごと渡せます</h2>
-      <p class="sec-lead reveal">Gensparkは「お願いする」だけで動くAIエージェント。どの業務から任せるか、六つの例を用意しました。</p>
+      <p class="sec-lead reveal">コピーして、<strong>黄いろの部分だけ</strong>自分用に変えて、そのまま貼ってください。ファイルが要るかどうかは、カードの右上を見てください。</p>
       <div class="uses-grid">
         <div class="task reveal">
-          <p class="what">リサーチ</p>
-          <p class="prompt">「競合5社を比較したレポートを作って」</p>
-          <span class="chip">出典つき</span><span class="chip">レポート</span>
+          <div class="fhead"><p class="cat">リサーチ</p><span class="fbadge none">ファイル 不要</span></div>
+          <div class="pbox">「競合になりそうなお店を5つ選んで、料金・品ぞろえ・<span class="fill">口コミでの評判</span>を表にまとめたレポートを作って。<span class="fill">出典のURLも付けて</span>。」</div>
+          <p class="out">→ <b>出典つきのレポート</b>が出てきます。何も用意せず、いきなり頼めるのが最初の一歩。</p>
         </div>
         <div class="task reveal">
-          <p class="what">資料づくり</p>
-          <p class="prompt">「この内容でスライドを10枚作って」</p>
-          <span class="chip">AIスライド</span><span class="chip">PPTX出力</span>
+          <div class="fhead"><p class="cat">資料づくり</p><span class="fbadge opt">ファイル あれば◎</span></div>
+          <div class="pbox">「<span class="fill">この商品</span>の紹介スライドを8枚作って。1枚目にキャッチコピー、最後の1枚に価格と連絡先を入れて。」</div>
+          <p class="out">→ <b>スライド（PPTX）</b>が出てきます。商品写真やチラシのPDFがあれば、いっしょに渡す。無くても作れます。</p>
         </div>
         <div class="task reveal">
-          <p class="what">画像・動画</p>
-          <p class="prompt">「SNS用の告知画像を4案作って」</p>
-          <span class="chip">画像生成</span><span class="chip">動画</span>
+          <div class="fhead"><p class="cat">画像・動画</p><span class="fbadge none">ファイル 不要</span></div>
+          <div class="pbox">「<span class="fill">秋季限定セール</span>の告知画像を4案作って。<span class="fill">落ち着いた感じで</span>、文字は大きめに。」</div>
+          <p class="out">→ <b>告知画像4案</b>が出てきます。気に入った案があれば「2枚目をもう少し明るく」と直せます。</p>
         </div>
         <div class="task reveal">
-          <p class="what">データ処理</p>
-          <p class="prompt">「このCSVを分析して要点をまとめて」</p>
-          <span class="chip">AIシート</span><span class="chip">グラフ</span>
+          <div class="fhead"><p class="cat">データ処理</p><span class="fbadge req">ファイル 必須</span></div>
+          <div class="pbox">「このエクセルを読んで、<span class="fill">月ごとの売れ方</span>をグラフにして。商品ごとに売れる月も表にまとめて。」</div>
+          <p class="out">→ <b>グラフと表</b>が出てきます。売上のエクセルなど、数値のファイルが無いと始まりません。ふだん使っている表をそのまま渡せます。</p>
         </div>
         <div class="task reveal">
-          <p class="what">文章</p>
-          <p class="prompt">「提案書のドラフトを書いて」</p>
-          <span class="chip">AIドキュメント</span>
+          <div class="fhead"><p class="cat">文章</p><span class="fbadge opt">ファイル あれば◎</span></div>
+          <div class="pbox">「<span class="fill">このチラシの文章</span>を、<span class="fill">50代のお客さん</span>に届く言葉で書き直して。文章は3パターン出して。」</div>
+          <p class="out">→ <b>直し案3パターン</b>が出てきます。元の文章（チラシ、メモ、LINEの文面）を渡すと、それに合わせて直します。</p>
         </div>
         <div class="task reveal">
-          <p class="what">仕組みづくり</p>
-          <p class="prompt">「問い合わせフォームを作って」</p>
-          <span class="chip">AI開発</span><span class="chip">公開まで</span>
+          <div class="fhead"><p class="cat">仕組みづくり</p><span class="fbadge none">ファイル 不要</span></div>
+          <div class="pbox">「問い合わせフォームを作って。欄は<span class="fill">名前・電話・メッセージ</span>の3つ。送ったら<span class="fill">お礼の画面</span>が出るようにして。」</div>
+          <p class="out">→ <b>動くフォーム</b>ができます。公開までの設定も、聞かれた通りに進めれば大丈夫です。</p>
         </div>
       </div>
-      <p class="micro uses-note reveal">依頼文は「◯◯を作って／して」だけでOK。書き方のコツは<a href="#note-1" style="color:var(--indigo);font-weight:700">使い方ノート①</a>で解説しています。</p>
+      <p class="micro uses-note reveal">ファイルは、エクセル・PDF・写真・メモ書き、<strong>持っているものをそのまま</strong>渡してみてください。「これでいいのかな」と迷う必要はありません。書き方のコツは<a href="#note-1" style="color:var(--indigo);font-weight:700">使い方ノート①</a>でも解説しています。</p>
     </div>
   </section>
 
