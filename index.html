@@ -435,7 +435,7 @@ details.faq[open] summary:after{content:"\FF0D"}
   .nav .btn{margin-left:auto}
 }
 </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。無料枠があります。ただし上限があります。"}}, {"@type": "Question", "name": "クレジットは、どうしたら減らない？", "acceptedAnswer": {"@type": "Answer", "text": "チャットのコアモデルと、自分のPCで動かすエージェントは減りません。GenCodeはクレジットが直接減ります。"}}, {"@type": "Question", "name": "ChatGPTの契約は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "要りません。Gensparkの道具を使えばGensparkのクレジットで動きます。"}}, {"@type": "Question", "name": "GPT-6 Astra は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。モデルの一覧に入っています。"}}, {"@type": "Question", "name": "モデルを変えれば、同じ結果になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。エージェントはモデルと段取り（ハーネス）で決まります。"}}, {"@type": "Question", "name": "Codex は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "GenTeamで自分のPCのCodexをつなげられます。"}}, {"@type": "Question", "name": "パソコンにAIを入れるの？", "acceptedAnswer": {"@type": "Answer", "text": "入るのは指示を出す小さな道具だけです。頭脳はクラウドにいます。"}}, {"@type": "Question", "name": "AIチャットで作ったコードはどうすれば使える？", "acceptedAnswer": {"@type": "Answer", "text": "エージェントに「別のチャットで作った。使えるようにして」と一言でOK。チャットを探し、リンク公開にして読み取り、テストして公開まで行きます。"}}, {"@type": "Question", "name": "会社のデータを渡して大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "作業中、中身はクラウドに送られます。先に確認してください。"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。無料枠があります。ただし上限があります。"}}, {"@type": "Question", "name": "クレジットは、どうしたら減らない？", "acceptedAnswer": {"@type": "Answer", "text": "チャットのコアモデルと、自分のPCで動かすエージェントは減りません。GenCodeはクレジットが直接減ります。"}}, {"@type": "Question", "name": "ChatGPTの契約は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "要りません。Gensparkの道具を使えばGensparkのクレジットで動きます。"}}, {"@type": "Question", "name": "GPT-6 Astra は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。モデルの一覧に入っています。"}}, {"@type": "Question", "name": "モデルを変えれば、同じ結果になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。エージェントはモデルと段取り（ハーネス）で決まります。"}}, {"@type": "Question", "name": "Codex は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "GenTeamで自分のPCのCodexをつなげられます。"}}, {"@type": "Question", "name": "パソコンにAIを入れるの？", "acceptedAnswer": {"@type": "Answer", "text": "入るのは指示を出す小さな道具だけです。頭脳はクラウドにいます。"}}, {"@type": "Question", "name": "AIチャットで作ったコードはどうすれば使える？", "acceptedAnswer": {"@type": "Answer", "text": "エージェントに「別のチャットで作った。使えるようにして」と一言でOK。チャットを探し、リンク公開にして読み取り、テストして公開まで行きます。"}}, {"@type": "Question", "name": "回収する方法を他の人も使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "スキルファイルをダウンロードし、チャットに添付して「このスキルを入れて」と送ると保存されます。"}}, {"@type": "Question", "name": "会社のデータを渡して大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "作業中、中身はクラウドに送られます。先に確認してください。"}}]}</script>
 </head>
 <body id="top">
 
@@ -1085,6 +1085,14 @@ details.faq[open] summary:after{content:"\FF0D"}
         </details>
         <details class="faq reveal"><summary>自分は何をすればいいの？　やらなくていいことは？</summary>
           <div class="faq-body"><p><strong>基本、何もしません。</strong>探すのも、読み取るのも、公開するのもエージェントの側です。うまくいかないときの最終手段は2つだけ。<strong>①</strong> あのチャットで「このコードをHTMLファイルで書き出して」と頼み、出てきたファイルをこのチャットに添付。<strong>②</strong> そのチャットの公開リンクを貼る。<strong>「スキルに保存して」は手順を覚える仕組みなので、ファイル本体の受け渡しには使えません</strong>（実際に試して、これが正解でした）。</p></div>
+        </details>
+        <details class="faq reveal"><summary>この「回収する方法」を、他の人も使えますか？</summary>
+          <div class="faq-body">
+            <p>使えるようにしてあります。この方法は<strong>スキル（手順を保存する仕組み）</strong>にまとめてあり、下のボタンからダウンロードできます。</p>
+            <p><a class="btn btn-sm" href="skills/ai-chat-rescue.skill" download>スキルをダウンロード（ai-chat-rescue.skill）</a></p>
+            <p><strong>入れ方（3ステップ）：</strong>① ボタンからファイルを保存 → ② 自分のGensparkチャットに<strong>添付</strong>（＋ボタン）→ ③ <strong>「このスキルを入れて」</strong>と送る。これであなたのアカウントに手順が保存され、そのあとは<strong>「別のチャットで作った○○、使えるようにして」</strong>と言うだけで同じことができます。</p>
+            <p class="micro">※ 無料・自分のアカウントに入ります。動作はうちの環境で確認済みですが、画面の作りは更新で変わることがあります。</p>
+          </div>
         </details>
         <p class="faq-grp reveal">安全・データ</p>
         <details class="faq reveal"><summary>会社のデータを渡して大丈夫ですか？</summary>
