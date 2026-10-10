@@ -113,6 +113,14 @@ a{color:inherit;text-decoration:none}
 }
 .btn-ghost:hover{border-color:var(--indigo)}
 .btn-sm{padding:10px 16px;font-size:13px;border-radius:9px}
+.btn-skill{
+  display:inline-block;background:var(--spark);color:#3B2A00;
+  font-weight:900;font-size:15px;line-height:1;
+  padding:14px 28px;border-radius:999px;
+  box-shadow:0 4px 14px rgba(245,166,35,.35);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn-skill:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(245,166,35,.5)}
 
 /* ---------- header ---------- */
 .sitehead{
@@ -1082,7 +1090,7 @@ details.faq[open] summary:after{content:"\FF0D"}
             <p><strong>実物の例：</strong><a href="https://gp20190917-beep.github.io/ai-play/neon-strike.html" target="_blank" rel="noopener">AI PLAYのNEON STRIKE</a>。AIチャットでClaudeに作ってもらった約3万字のゲームを、この手順で回収して、そのまま公開したものです（動作テストとタイトル画面の確認まで済ませてあります）。</p>
             <p><strong>正直な注意：</strong>記録の取り方のくせで、コードの一部だけが取れないことがあります。その場合は足りない部分だけ直します（このゲームでも、タイトル画面の操作説明を直して公開しました）。中身が変わることになるときは、事前に伝えます。</p>
             <p><strong>この方法を、スキルにまとめてあります。</strong>自分のGensparkに入れておけば、次回からは<strong>「別のチャットで作った○○、使えるようにして」</strong>のひとことだけで同じことができます。</p>
-            <p style="margin-top:14px"><a class="btn" style="color:#fff" href="skills/ai-chat-rescue.skill" download>スキルをダウンロードする（無料）</a></p>
+            <p style="margin-top:16px"><a class="btn-skill" href="skills/ai-chat-rescue.skill" download>↓ スキルをダウンロードする（無料）</a></p>
             <p class="micro">入れ方：① ボタンから保存 → ② 自分のチャットに添付（＋ボタン）→ ③「このスキルを入れて」と送る。あなたのアカウントに手順が保存されます。</p>
           </div>
         </details>
