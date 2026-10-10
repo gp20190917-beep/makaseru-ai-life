@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>スキル置き場｜まかせるAI生活（非公認）</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans JP",sans-serif;background:#F7F7F4;color:#1A1D23;min-height:100vh;display:flex;justify-content:center;padding:24px 14px 40px;line-height:1.75}
+.app{width:100%;max-width:640px}
+.hdr{background:#1A1D23;color:#fff;border-radius:18px;padding:22px 24px;margin-bottom:16px}
+.hdr .logo{font-family:"Zen Kaku Gothic New",sans-serif;font-size:28px;font-weight:900;letter-spacing:2px}
+.hdr .logo b{color:#F5A623}
+.hdr p{font-size:13px;color:rgba(255,255,255,.68);margin-top:6px}
+.howto{background:#fff;border:2px dashed #C9CCD2;border-radius:18px;padding:20px 22px;margin-bottom:16px}
+.howto h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:16.5px;font-weight:900}
+.howto ol{margin:10px 0 0 1.2em;font-size:14px}
+.howto li{margin-bottom:6px}
+.card{background:#fff;border:1px solid #E4E5EA;border-radius:18px;padding:20px 22px;margin-bottom:14px}
+.card .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;color:#34329E;background:#EEF0FF;border-radius:999px;padding:3px 12px}
+.card h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:18px;font-weight:900;line-height:1.5;margin-top:8px}
+.card p{font-size:13px;color:#5B6172;margin-top:6px}
+.card .ach{font-size:12px;color:#8a5d00;background:#FFF6E3;border-radius:8px;padding:6px 10px;display:inline-block;margin-top:10px}
+.btn-skill{display:inline-block;margin-top:12px;background:#F5A623;color:#3B2A00;font-weight:900;font-size:14px;padding:11px 26px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(245,166,35,.35)}
+.soon{opacity:.55}
+.soon .tag{background:#ececef;color:#8a8f9c}
+.soon .btn-skill{background:#ECECEF;color:#8a8f9c;pointer-events:none;box-shadow:none}
+.micro{font-size:11.5px;color:#8a8f9c;margin:14px 0;line-height:1.9}
+.ftr{font-size:11px;color:#8a8f9c;text-align:center;line-height:1.9;margin-top:12px}
+.ftr a{color:#4C4AE4}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="hdr">
+    <div class="logo">スキル <b>置き場</b></div>
+    <p>私が実際に使ってみて、うまいってなった手順を「スキル」（エージェントに教える手順書）にして置いています。無料で、あなたのGensparkに入れられます。</p>
+  </div>
+
+  <div class="howto">
+    <h2>入れ方（どれも共通・3ステップ）</h2>
+    <ol>
+      <li>カードのボタンから、スキルのファイルを保存する</li>
+      <li>自分のGensparkチャットを開いて、ファイルを<strong>添付</strong>（＋ボタン）</li>
+      <li><strong>「このスキルを入れて」</strong>と送る——これで自分のアカウントに保存されます</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <span class="tag">チャット・ファイル</span>
+    <h2>ai-chat-rescue（別チャット回収）</h2>
+    <p>別のチャット（AIチャット・Claude等）で作ったコードやファイルを、コピー＆ペーストなしで回収し、テストして公開まで行く手順。</p>
+    <p class="ach">実績：約3万字のゲームを回収して公開（2026年10月）</p>
+    <a class="btn-skill" href="skills/ai-chat-rescue.skill" download>↓ スキルをダウンロードする（無料）</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">X投稿</span>
+    <h2>x-post-counter（文字数チェック）</h2>
+    <p>X投稿の文面を、日本語2・英数字1・URLは23換算で計測し、280字上限の余白を確認する。複数案を渡す前に全案チェックする運用向け。</p>
+    <p class="ach">実績：このサイトのX告知で毎回使用</p>
+    <a class="btn-skill" href="skills/x-post-counter.skill" download>↓ スキルをダウンロードする（無料）</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">note</span>
+    <h2>note-table-image（表を画像化）</h2>
+    <p>noteの本文にはHTMLが貼れないので、比較表・手順表を幅2560pxの画像にして貼れる形にする手順とテンプレ。</p>
+    <p class="ach">実績：note記事の表をすべてこの方法で制作</p>
+    <a class="btn-skill" href="skills/note-table-image.skill" download>↓ スキルをダウンロードする（無料）</a>
+  </div>
+
+  <div class="card soon">
+    <span class="tag">準備中</span>
+    <h2>note-headline（見出し画像を量産）</h2>
+    <p>1280×670の見出し画像を、テンプレ＋ screenshot で量産する手順。実績あり。近日追加。</p>
+    <span class="btn-skill">準備中</span>
+  </div>
+
+  <div class="card soon">
+    <span class="tag">準備中</span>
+    <h2>telop-reel（テロップ動画をほぼ0円で）</h2>
+    <p>背景画像＋HTML＋ffmpegで、クレジットをほぼ使わずリール動画を作る手順。実績あり。近日追加。</p>
+    <span class="btn-skill">準備中</span>
+  </div>
+
+  <p class="micro">スキルは、Gensparkのエージェントに読ませる「手順書」です。動ける範囲は、あなたの契約や機能の状況によって変わります。うまく動かないときは、そのスキルの仕事をふつうにチャットで頼んでもらえれば、同じ手順で進めます。</p>
+
+  <p class="ftr">このページはGensparkの非公認ファンメディア「まかせるAI生活」が運営しています。Genspark社とは無関係です。<br><a href="index.html">まかせるAI生活へ戻る →</a></p>
+</div>
+</body>
+</html>
