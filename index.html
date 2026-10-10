@@ -158,6 +158,10 @@ h1 em{
 .lede{margin-top:20px;font-size:16.5px;color:var(--sub);max-width:30em}
 .hero-cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;align-items:center}
 .hero .micro{margin-top:16px}
+.hero-main{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:border-color .18s ease}
+.hero-main:hover{border-color:var(--indigo)}
+.hero-main-ttl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:15.5px}
+.hero-main-sub{font-size:12.5px;color:var(--sub);margin-top:4px}
 
 /* task-log panel (signature) */
 .logpanel{
@@ -431,7 +435,7 @@ details.faq[open] summary:after{content:"\FF0D"}
   .nav .btn{margin-left:auto}
 }
 </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。無料枠があります。ただし上限があります。"}}, {"@type": "Question", "name": "クレジットは、どうしたら減らない？", "acceptedAnswer": {"@type": "Answer", "text": "チャットのコアモデルと、自分のPCで動かすエージェントは減りません。GenCodeはクレジットが直接減ります。"}}, {"@type": "Question", "name": "ChatGPTの契約は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "要りません。Gensparkの道具を使えばGensparkのクレジットで動きます。"}}, {"@type": "Question", "name": "GPT-6 Astra は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。モデルの一覧に入っています。"}}, {"@type": "Question", "name": "モデルを変えれば、同じ結果になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。エージェントはモデルと段取り（ハーネス）で決まります。"}}, {"@type": "Question", "name": "Codex は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "GenTeamで自分のPCのCodexをつなげられます。"}}, {"@type": "Question", "name": "パソコンにAIを入れるの？", "acceptedAnswer": {"@type": "Answer", "text": "入るのは指示を出す小さな道具だけです。頭脳はクラウドにいます。"}}, {"@type": "Question", "name": "会社のデータを渡して大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "作業中、中身はクラウドに送られます。先に確認してください。"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。無料枠があります。ただし上限があります。"}}, {"@type": "Question", "name": "クレジットは、どうしたら減らない？", "acceptedAnswer": {"@type": "Answer", "text": "チャットのコアモデルと、自分のPCで動かすエージェントは減りません。GenCodeはクレジットが直接減ります。"}}, {"@type": "Question", "name": "ChatGPTの契約は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "要りません。Gensparkの道具を使えばGensparkのクレジットで動きます。"}}, {"@type": "Question", "name": "GPT-6 Astra は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。モデルの一覧に入っています。"}}, {"@type": "Question", "name": "モデルを変えれば、同じ結果になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。エージェントはモデルと段取り（ハーネス）で決まります。"}}, {"@type": "Question", "name": "Codex は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "GenTeamで自分のPCのCodexをつなげられます。"}}, {"@type": "Question", "name": "パソコンにAIを入れるの？", "acceptedAnswer": {"@type": "Answer", "text": "入るのは指示を出す小さな道具だけです。頭脳はクラウドにいます。"}}, {"@type": "Question", "name": "AIチャットで作ったコードはどうすれば使える？", "acceptedAnswer": {"@type": "Answer", "text": "エージェントに「別のチャットで作った。使えるようにして」と一言でOK。チャットを探し、リンク公開にして読み取り、テストして公開まで行きます。"}}, {"@type": "Question", "name": "会社のデータを渡して大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "作業中、中身はクラウドに送られます。先に確認してください。"}}]}</script>
 </head>
 <body id="top">
 
@@ -694,7 +698,6 @@ details.faq[open] summary:after{content:"\FF0D"}
           <p class="src">※ 画面で見た倍率と、公式ヘルプの記載にもとづきます。性能の感想は書いていません（まだ試していないため）。仕様は変わることがあります。当サイトはGensparkの非公式ファンメディアです。</p>
           </div>
         </details>
->
       </div>
     </div>
   </section>
@@ -1029,260 +1032,7 @@ details.faq[open] summary:after{content:"\FF0D"}
           </div>
         </details>
 
-      </div>uestions">
-    <div class="wrap">
-      <p class="eyebrow reveal">Things I looked up</p>
-      <h2 class="reveal" style="font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,32px)">俺の気になること</h2>
-      <p class="sec-lead reveal">分からない名前が出てきたとき、そのままにせず聞いています。聞いた言葉をそのまま残して、返ってきた答えを分かりやすくまとめました。</p>
-      <div class="qa-list">
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.10.04 ／ その1</p>
-          <h3>「GensparkでCodexって使えるの？」——使えます。でも「使うべき」とは、別の話でした</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>gensparkってコーデックス使えないんだよね</li>
-            <li>GenTeamでCodexを使う手順を教えて</li>
-            <li>ChatGPTの契約が必要？</li>
-            <li>ChatGPT契約するなら、素直にそっちから使うよ。gensparkで簡単に出来るかどうかだよ</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>結論から言うと、使えます。</strong>ただし「どこで使うか」で話が変わります。ここが、いちばん面白かったところでした。</p>
-            <p><strong>① このチャットには、Codexは入っていません。</strong>スーパーエージェントは、Genspark 独自のツールで動いています。だから「Genspark＝Codexが使える」わけではありません。</p>
-            <p><strong>② では、どこで使えるのか。GenTeam（チームの作業場）です。</strong>公式ヘルプによると、GenTeam は<strong>自分のPCで動いているコーディングエージェントを接続できる</strong>ようになっていて、対応しているのは <strong>Claude Code / Codex CLI / Cursor CLI / OpenCode</strong> の4つです。</p>
-            <p><strong>③ 仕組みは、こうです。</strong></p>
-            <ul>
-              <li>自分のPCで、接続コマンドを1回実行する（コピーして貼るだけ）</li>
-              <li>GenTeam で「ローカルエージェント」を作り、使うランタイム（Codex）を選ぶ</li>
-              <li>あとはチャンネルやDMで、ふつうのエージェントと同じように話しかける</li>
-            </ul>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/codex-m.png"><img src="img/codex.png" alt="このチャットにはCodexは入っておらず、GenTeamで自分のPCのCodexをつなげられる" loading="lazy"></picture>
-              <figcaption>このチャットには入っていない。GenTeam で自分のPCのCodexをつなげられる。</figcaption>
-            </figure>
-            <p>動いているのは<strong>自分のPCと、自分の契約</strong>です。だから<strong>Gensparkのクレジットは1つも減りません。</strong>ここは、意外と知られていないと思います。</p>
-            <p>この「クレジットの落とし穴」は、<a href="#log-6" style="color:var(--indigo);font-weight:700">プチ発見ログ</a>にも書きました。</p>
-            <p><strong>※ ただし、条件が1つあります。</strong>これは<strong>「自分のPCで動かす」</strong>場合の話です。GenTeamでエージェントを作るとき、既定では<strong>Gensparkのクラウド</strong>で動く方が選ばれます。そちらは、ふつうにクレジットを使います。<strong>「どこで動かすか」で、財布が変わります。</strong></p>
-            <p><strong>④ 必要なもの。</strong>Codexにサインインする方法は、<strong>ChatGPTのプラン</strong>か<strong>OpenAIのAPIキー</strong>です。そして——<strong>ChatGPTの無料プランでも、Codexは使えます</strong>（公式の料金表に「Codex／上限あり」と載っています）。<a href="#q-routes" style="color:var(--indigo);font-weight:700">無料で使える範囲</a>は、こちらに整理しました。</p>
-            <p><strong>⑤ ただし、ここからが本題です。</strong>「Codexを使いたいだけ」なら、<strong>Gensparkを挟まず、Codexを直接使うのが正解</strong>でした。GenTeamを通すと、PCをつけっぱなしにしておく必要があり、セットアップの手間も増えます。<strong>コーディングの体験そのものは、良くなりません。</strong></p>
-            <p><strong>⑥ では、挟む価値が出るのは、どんなときか。</strong></p>
-            <ul>
-              <li>スマホから、自宅PCのCodexに遠隔で指示したい</li>
-              <li>Gensparkのエージェント（調べもの・スライド）とCodexを、同じ場所に並べたい</li>
-              <li>チームのチャンネルから、Codexにタスクを投げたい</li>
-            </ul>
-            <p><strong>「使える」と「使うべき」は、別の話。</strong>これが、この一件でいちばん持ち帰ったことでした。道具は、置き場所で得手不得手が決まります。</p>
-          </div>
-          <p class="src">※ 対応状況は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/genteam" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenTeam）</a>と<a href="https://help.openai.com/ja-jp/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">OpenAI公式ヘルプ（Codex）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.10.04 ／ その2</p>
-          <h3>「Genspark Code みたいな Windows アプリ」は、実は別の名前でした</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>genspark Code みたいな Windows アプリ、出たよね</li>
-            <li>GenCode と genspark Code、両方あるの？違いは？</li>
-            <li>何となくカッコいいから GenCode 触りたい。素人でもできるんでしょ</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>出ています。ただし、名前が違います。</strong>「Genspark Code」ではなく、<strong>GenCode（ジェンコード）</strong>です。公式ヘルプのFAQにも「<strong>別物です</strong>」とはっきり書かれています。名前が似ているので、まずここで一度つまずきます。</p>
-            <div class="tbl-wrap">
-              <table class="tbl">
-                <thead><tr><th></th><th>Genspark Code</th><th>GenCode</th></tr></thead>
-                <tbody>
-                  <tr><td>何をする</td><td>文章からアプリを丸ごと作る</td><td>自分のPCのフォルダのコードを触る</td></tr>
-                  <tr><td>どこで動く</td><td>ブラウザ</td><td>アプリの画面／黒い画面（CLI）</td></tr>
-                  <tr><td>向いている人</td><td>コードを書きたくない人</td><td>自分のファイルを触りたい人</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/gencode-m.png"><img src="img/gencode.png" alt="Genspark CodeとGenCodeの違い、GenCodeの2つの入口" loading="lazy"></picture>
-              <figcaption>名前は似ているが、動く場所も用途も別。GenCode の入口はアプリと黒い画面の2つ。</figcaption>
-            </figure>
-            <p><strong>GenCode の入口は、2つあります。</strong></p>
-            <ul>
-              <li><strong>アプリの画面（Super App）</strong>…チャットで話す感覚。素人はこちら。</li>
-              <li><strong>黒い画面（CLI）</strong>…コマンドを打つ。開発者向け。</li>
-            </ul>
-            <p>どちらも中身は同じエージェントで、できることも同じです。</p>
-            <p><strong>Windows でも使えます。</strong>Super App は macOS・Windows・Linux 向けに、無料でダウンロードできます（Mac版だけは Apple Silicon が必要です）。</p>
-            <p><strong>料金は、Genspark のクレジットから。</strong>別の契約は要りません。ただし「無料利用枠」の対象ではなく、クレジットが直接減ります。</p>
-            <p><strong>使えるモデルは9種類。</strong>Claude・GPT・Gemini・DeepSeek・GLM・MiniMax・Kimi・Grok・Nemotron が、1つの中に入っています。ChatGPT を別に契約しなくても、GPT系のモデルでコードを書かせられる、ということです。</p>
-            <p><strong>素人目線でいちばん助かるのは、これでした。</strong>分からなくなったら、<strong>GenCode 自身にエラー文を貼って「直して」と言えば、直してくれます。</strong>つまずく場所は、だいたいそこで通ります。</p>
-          </div>
-          <p class="src">※ 仕様は変わることがあります。最新は<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.10.04 ／ その3</p>
-          <h3>「自分のPCで動かす」って、パソコンにAIを入れるの？——入るのは「小さな道具」だけでした</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>自分のPCで動かすってことは、自分のパソコンにAIを入れるのか？</li>
-            <li>かなりのデータ量になるよね？</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>いいえ、AIそのものは入りません。</strong>ここは、いちばん誤解されやすいところだと思います。</p>
-            <p><strong>PCに入るのは、「指示を出す小さな道具」だけです。</strong>Codex CLI や Claude Code は、<strong>数十MBほどの軽いプログラム</strong>です。パソコンに何GBも落ちてくる、ということはありません。</p>
-            <p><strong>AIの本体（モデル）は、クラウドの中にいます。</strong>あなたのパソコンがやるのは「どのファイルを読むか」「何を実行するか」という<strong>手足の仕事</strong>で、考えるのは<strong>ネットの向こう</strong>です。</p>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/local-m.png"><img src="img/local.png" alt="PCに入るのは小さな道具だけで、AIの本体はクラウドにいる" loading="lazy"></picture>
-              <figcaption>PCに入るのは「道具」だけ。頭脳（モデル）は、クラウドにいます。</figcaption>
-            </figure>
-            <p><strong>では、データ量の心配は無いのか。</strong>「パソコンの容量」については、心配いりません。<strong>ただし別の意味で、覚えておくことがあります。</strong>作業の途中で、<strong>あなたのコードの中身が、ネットを通ってクラウドへ送られます</strong>。ここが、容量ではなく<strong>「中身を見せてよいか」</strong>という話になります。<strong>会社の売上表や、お客様の情報が入ったフォルダを触らせるなら、ここは先に確認しておくべきところです。</strong></p>
-            <p><strong>補足：自分で「ローカルのAI」を入れる道もあります。</strong>Ollama や LM Studio という道具を使うと、<strong>AIの本体そのものを自分のPCに置けます</strong>。この場合は、たしかに<strong>数GB〜20GB以上</strong>になります。ただし、Codex や Claude Code は、<strong>それを必要としません</strong>。ふつうに使うだけなら、入れるのは道具だけです。</p>
-          </div>
-          <p class="src">※ 仕様は変わることがあります。最新は<a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">Codex CLI 公式ドキュメント</a>と<a href="https://www.genspark.ai/helpcenter/genteam" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenTeam）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.10.04 ／ その4</p>
-          <h3>「PCで動く」のに「クラウドで動く」？　——両方正しい。クレジットが減らない理由も、ここにありました</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>PCで動くと言ったが、結局クラウドで動くと書いてある</li>
-            <li>そこで、クレジットは減らないのか</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>どちらも間違いではありません。動いている「部分」が、別々なんです。</strong>ここを分けて考えると、クレジットの話がすっと通ります。</p>
-            <ul>
-              <li><strong>手足（エージェント）＝自分のPC</strong>：ファイルを読む、コマンドを実行する、編集する</li>
-              <li><strong>頭脳（モデル）＝クラウド</strong>：考える。これは、どのやり方でも変わりません</li>
-            </ul>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/pay-m.png"><img src="img/pay.png" alt="手足はPC、頭脳はクラウド。クラウドの代金を誰が払うかでクレジットが変わる" loading="lazy"></picture>
-              <figcaption>分かれ目は「どこで動くか」ではなく、<strong>「その代金を誰が払うか」</strong>でした。</figcaption>
-            </figure>
-            <p><strong>だから、答えはこうなります。</strong>クラウドで動いていても、<strong>その代金を自分が払っていれば、Gensparkのクレジットは減りません。</strong></p>
-            <div class="tbl-wrap">
-              <table class="tbl">
-                <thead><tr><th>動かす場所</th><th>頭脳の代金を払う人</th><th>Gensparkのクレジット</th></tr></thead>
-                <tbody>
-                  <tr><td>自分のPCのエージェント</td><td>自分（自分のChatGPT契約）</td><td class="yes">減りません</td></tr>
-                  <tr><td>Gensparkのクラウドのエージェント</td><td>Genspark</td><td class="no">減ります</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p><strong>1つだけ、忘れないでください。</strong>「減らない」のは<strong>Gensparkのクレジット</strong>の話です。<strong>タダではありません。</strong>頭脳の代金は、<strong>自分のChatGPTの契約から</strong>出ています。払う先が変わっただけで、誰かは払っています。</p>
-          </div>
-          <p class="src">※ 「自分のPCで動かす」と「クラウドで動かす」では、使うアカウントが変わります。最新は<a href="https://www.genspark.ai/helpcenter/genteam" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenTeam）</a>でご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal" id="q-routes">
-          <p class="qa-meta">2026.10.04 ／ その5</p>
-          <h3>「ChatGPT契約なしで動くんじゃなかった？」——動きます。しかも、無料プランでも使えました</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>え？　ChatGPT契約なしで、動くようなこと言ってなかったか？</li>
-            <li>無料で、動くから事件になるんだよ</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>その通りでした。しかも、私の見立てより、条件はもっと緩いものでした。</strong>ChatGPTの<strong>無料プランでも、Codexは使えます</strong>（公式の料金表に「Codex／無料版／上限あり」と載っています）。<strong>つまり、追加の契約は要りません。</strong></p>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/free-m.png"><img src="img/free.png" alt="GensparkのクレジットもOpenAIの料金も0でCodexが動く" loading="lazy"></picture>
-              <figcaption>自分のPCで動かし、無料プランの範囲で使うなら——<strong>追加の契約は、要りません。</strong></figcaption>
-            </figure>
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/routes-m.png"><img src="img/routes.png" alt="ChatGPT契約なしで使えるルート" loading="lazy"></picture>
-              <figcaption>「契約なし」で使える道は、いくつもあります。<strong>誰の道具か</strong>で、払う先が決まります。</figcaption>
-            </figure>
-            <div class="tbl-wrap">
-              <table class="tbl">
-                <thead><tr><th>ルート</th><th>追加の契約</th><th>何で払う</th></tr></thead>
-                <tbody>
-                  <tr><td>Codex ＋ ChatGPT<strong>無料プラン</strong></td><td class="yes">不要</td><td>無料枠（上限あり）</td></tr>
-                  <tr><td>Codex ＋ ChatGPT有料プラン</td><td>必要</td><td>ChatGPTの契約</td></tr>
-                  <tr><td>Codex ＋ APIキー</td><td class="yes">不要</td><td>使った分だけ（従量課金）</td></tr>
-                  <tr><td><strong>GenCode</strong>（Gensparkの道具）</td><td class="yes">不要</td><td>Gensparkのクレジット</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p><strong>ここが、いちばん言いたかったところです。</strong>「無料で動く」——これが、この一件の本体でした。GenTeamで<strong>自分のPC</strong>のCodexを動かせば、Gensparkのクレジットは0。Codexは<strong>無料プランでも使える</strong>。だから、<strong>財布から出すお金は、0で済みます。</strong></p>
-            <p><strong>ただし、無料枠には上限があります。</strong>使い込めば足りなくなります。そのときは、有料プランかAPIキーに切り替える——順番としては、これでいいと思っています。<strong>まず無料で動かして、必要になってから払う。</strong></p>
-          </div>
-          <p class="src">※ Codexの対応プランは公式の料金表で、GenCodeの料金は<a href="https://www.genspark.ai/helpcenter/gencode" target="_blank" rel="noopener" style="color:var(--indigo);font-weight:700">公式ヘルプ（GenCode）</a>でご確認ください。無料枠には上限があります。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-      
-        <p class="qa-grp reveal">シリーズ：Gensparkの正体 <small>聞いた言葉から、中身を確かめていく</small></p>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.09 ／ その6</p>
-          <h3>「あなたは、Gensparkじゃなかった」——私が最初に勘違いしていたこと</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>あなたは、今Claudですね、　俺は、それをわかっていなかった、ジェンスパークだと思っているから</li>
-            <li>クロードコードだと？</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>これを知ったとき、少し恥ずかしかったです。</strong>私は「Genspark」という1つのAIと話していると思っていました。違いました。</p>
-            <p><strong>Gensparkは、AIそのものではなく「器（うつわ）」です。</strong>入口は1つ。でも、中で働いているモデルは1つではありません。Claude（Anthropic）・GPT（OpenAI）・Gemini（Google）・Grok（xAI）など、<strong>複数の会社のモデルが、場面や時期によって入れ替わります。</strong></p>
-            
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/identity1-m.png"><img src="img/identity1.png" alt="Gensparkは器で、中に複数のモデルがいる" loading="lazy"></picture>
-              <figcaption>Gensparkは器。中で働くモデルは、1つではありません。</figcaption>
-            </figure>
-            <p><strong>だから、混乱するんです。</strong>昨日はClaudeだったのに、今日は別のモデル。同じモデルでも、道具（エージェント）が違えば結果も違う。<strong>「同じGensparkなのに、答えの癖が違う」</strong>と感じたら、それは気のせいではありません。</p>
-            <p><strong>私の使い方が、これで変わりました。</strong>「Gensparkがやってくれる」と考えるのをやめて、<strong>「この作業は、どのモデルに頼むか」</strong>を意識するようになりました。50代には関係のない話に見えますが、<strong>ここを知らないと、ずっとモヤモヤしたまま使うことになります。</strong></p>
-          </div>
-          <p class="src">※ 使えるモデルは、契約と時期で変わります。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.09 ／ その7</p>
-          <h3>「契約したのに、できないと言われた」——できる／できないの分かれ目</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>あなたは、AIエージェントでしょ　なのに、ココナラに入力とかも任せたいと思って契約したのにできないの？</li>
-            <li>出来るとか言ってたから契約したのに　ログインする時に許可する感じでもできんのか</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>これは、私がいちばん期待して、いちばん裏切られたところです。</strong>「AIに任せれば、面倒な入力も消える」と思っていました。</p>
-            <p><strong>分かれ目は、シンプルでした。</strong></p>
-            <ul>
-              <li><strong>できる</strong>：公開されているページ、API（外部から使える窓口）があるサービス、<strong>自分のPCの中のファイル</strong></li>
-              <li><strong>できない</strong>：<strong>ログインが必要なサイトの、内側の操作</strong>（フォーム入力、出品、投稿の確定など）</li>
-            </ul>
-            <p><strong>理由は、能力ではなく、許可です。</strong>ログインの壁の向こうは、<strong>そのサイトの規約とセキュリティの世界</strong>です。AIが勝手に入って操作する、というのは、<strong>技術の問題というより、許されていない</strong>からできません。</p>
-            <p><strong>だから、「ログインして入力して」は、今のところ頼めません。</strong>ここを期待して契約すると、必ずがっかりします。<strong>私がそうでした。</strong></p>
-            <p><strong>では、何が任せられるのか。</strong>下ごしらえです。<strong>文面を考え、整え、コピーできる形にする</strong>——ここは任せられます。<strong>最後の「貼って、送る」だけが、私の手元に残ります。</strong>これが分かってから、道具としての満足度はむしろ上がりました。</p>
-          </div>
-          <p class="src">※ 対応範囲は、サービスの規約と提供状況で変わります。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-        <div class="qa-item reveal">
-          <p class="qa-meta">2026.08-09 ／ その8</p>
-          <h3>「無料と書いてあるが、どこまで無料か」——「無料」が、3つありました</h3>
-          <p class="qa-label">実際に聞いた言葉</p>
-          <ul class="qa-quotes">
-            <li>ジェンスパークのプラン購入するとAIチャットは無料とあるが、どこまで無料か</li>
-            <li>ここで質問したらクレジットは？</li>
-            <li>ジェンスパークはまだわからないことがあってクレジット無くなるから使いにくい</li>
-          </ul>
-          <div class="qa-answer">
-            <p><strong>「無料」と書いてあるのに、クレジットが減る。</strong>これが、最初にいちばん混乱したところでした。理由は、<strong>「無料」が3つあるから</strong>です。</p>
-            
-            <figure class="fig">
-              <picture><source media="(max-width:640px)" srcset="img/free3-m.png"><img src="img/free3.png" alt="月額クレジット・無料利用枠・コアモデル特典の3つ" loading="lazy"></picture>
-              <figcaption>「無料」の言葉が3つ。指しているものが、それぞれ違いました。</figcaption>
-            </figure>
-            <div class="tbl-wrap">
-              <table class="tbl">
-                <thead><tr><th>呼び名</th><th>中身</th><th>使うとどうなる</th></tr></thead>
-                <tbody>
-                  <tr><td>月額クレジット</td><td>有料プランについてくる分</td><td>減って、補充される</td></tr>
-                  <tr><td>無料利用枠</td><td>7日ごとに戻る分</td><td>Standardモードで使える</td></tr>
-                  <tr><td>コアモデルの特典</td><td>9月18日より前からの契約者</td><td>12月31日まで、AIチャットが0</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p><strong>ここを分けると、すっと通ります。</strong>私の場合は③に当てはまっていたので、<strong>AIチャットではクレジットが減っていませんでした。</strong>減っていたのは、<strong>別の作業（GenCode・画像・スライドなど）</strong>です。</p>
-            <p><strong>「使いにくい」の正体は、これでした。</strong>減る／減らないが、<strong>作業の種類で変わる</strong>のに、同じ「無料」という言葉で説明されていた。<strong>言葉が同じで、中身が違う。</strong>だから、分からなくなっていました。</p>
-          </div>
-          <p class="src">※ 料金と枠は変わることがあります。必ず公式サイトの最新情報をご確認ください。当サイトはGensparkの非公式ファンメディアです。</p>
-        </div>
-
-</div>
+      </div>
     </div>
   </section>
 
@@ -1320,8 +1070,21 @@ details.faq[open] summary:after{content:"\FF0D"}
           <div class="faq-body"><p>入りません。入るのは<strong>指示を出す小さな道具</strong>だけです。考える<strong>頭脳（モデル）はクラウド</strong>にいます。「ローカルのAI」を自分で入れる道は別にあります（その場合は数GB〜）。</p></div>
         </details>
         <p class="faq-grp reveal">チャット・ファイル</p>
-        <details class="faq reveal"><summary>別のチャットで作ったものも、そのまま使えますか？</summary>
-          <div class="faq-body"><p>使えます。<strong>エージェントが過去のチャットを探して、作ったファイルを回収</strong>し、サイトやゲーム置き場への公開まで行きます。コピー＆ペーストは不要です。私の側で「そのチャットをリンク公開」にして読み取る——これがGensparkならではの動かし方です。<a href="https://gp20190917-beep.github.io/ai-play/" target="_blank" rel="noopener">AI PLAYのNEON STRIKE</a>は、AIチャットで作ったゲームをこの方法で回収した実物です。</p></div>
+        <details class="faq reveal"><summary>AIチャット（Claude）で作ったコードやファイルは、どうすれば「使えるもの」になりますか？</summary>
+          <div class="faq-body">
+            <p><strong>まず「どこにあるか」から。</strong>AIチャットで作ったものは、<strong>そのチャットのメッセージの中</strong>にあります。ファイルとして書き出していなければ、基本はそこにしかありません。「保存した覚えがない」と焦らなくて大丈夫です。</p>
+            <p>そこへ、別のチャットのエージェントに<strong>「別のチャットで○○を作った。使えるようにして」</strong>とひとこと伝えると、エージェントの側でこう進みます👇</p>
+            <p>① <strong>過去のチャットを探す</strong>（ゲームの名前など、言葉のかけらで検索）<br>
+            ② そのチャットを<strong>リンク公開</strong>に切り替えて、本物のコードを読み取る（あなたの操作はゼロ）<br>
+            ③ エージェントの作業場（ワークスペース）に取り込んで、<strong>動くかテストする</strong><br>
+            ④ ゲーム置き場やサイトに<strong>公開</strong>する。URLができて、すぐ遊べる・使える状態になります</p>
+            <p>つまり、<strong>チャットの中にある作りかけが、そのまま「外で使えるもの」になります。</strong>コピー＆ペーストも、ファイルのダウンロードも不要です。</p>
+            <p><strong>実物の例：</strong><a href="https://gp20190917-beep.github.io/ai-play/neon-strike.html" target="_blank" rel="noopener">AI PLAYのNEON STRIKE</a>。AIチャットでClaudeに作ってもらった約3万字のゲームを、この手順で回収して、そのまま公開したものです（動作テストとタイトル画面の確認まで済ませてあります）。</p>
+            <p><strong>正直な注意：</strong>記録の取り方のくせで、コードの一部だけが取れないことがあります。その場合は足りない部分だけ直します（このゲームでも、タイトル画面の操作説明を直して公開しました）。中身が変わることになるときは、事前に伝えます。</p>
+          </div>
+        </details>
+        <details class="faq reveal"><summary>自分は何をすればいいの？　やらなくていいことは？</summary>
+          <div class="faq-body"><p><strong>基本、何もしません。</strong>探すのも、読み取るのも、公開するのもエージェントの側です。うまくいかないときの最終手段は2つだけ。<strong>①</strong> あのチャットで「このコードをHTMLファイルで書き出して」と頼み、出てきたファイルをこのチャットに添付。<strong>②</strong> そのチャットの公開リンクを貼る。<strong>「スキルに保存して」は手順を覚える仕組みなので、ファイル本体の受け渡しには使えません</strong>（実際に試して、これが正解でした）。</p></div>
         </details>
         <p class="faq-grp reveal">安全・データ</p>
         <details class="faq reveal"><summary>会社のデータを渡して大丈夫ですか？</summary>
