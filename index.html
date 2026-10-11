@@ -445,6 +445,79 @@ details.faq[open] summary:after{content:"\FF0D"}
 }
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。無料枠があります。ただし上限があります。"}}, {"@type": "Question", "name": "クレジットは、どうしたら減らない？", "acceptedAnswer": {"@type": "Answer", "text": "チャットのコアモデルと、自分のPCで動かすエージェントは減りません。GenCodeはクレジットが直接減ります。"}}, {"@type": "Question", "name": "ChatGPTの契約は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "要りません。Gensparkの道具を使えばGensparkのクレジットで動きます。"}}, {"@type": "Question", "name": "GPT-6 Astra は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。モデルの一覧に入っています。"}}, {"@type": "Question", "name": "モデルを変えれば、同じ結果になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "なりません。エージェントはモデルと段取り（ハーネス）で決まります。"}}, {"@type": "Question", "name": "Codex は使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "GenTeamで自分のPCのCodexをつなげられます。"}}, {"@type": "Question", "name": "パソコンにAIを入れるの？", "acceptedAnswer": {"@type": "Answer", "text": "入るのは指示を出す小さな道具だけです。頭脳はクラウドにいます。"}}, {"@type": "Question", "name": "AIチャットで作ったコードはどうすれば使える？", "acceptedAnswer": {"@type": "Answer", "text": "エージェントに「別のチャットで作った。使えるようにして」と一言でOK。チャットを探し、リンク公開にして読み取り、テストして公開まで行きます。"}}, {"@type": "Question", "name": "会社のデータを渡して大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "作業中、中身はクラウドに送られます。先に確認してください。"}}]}</script>
+<style id="cool-overrides">
+/* ===== かっこよく上書き ===== */
+:root{ --hero-bg:#0F0D2E; }
+
+/* ヘッダー：ダークのガラス風 */
+.sitehead{background:rgba(15,13,46,.75);border-bottom:1px solid rgba(255,255,255,.08)}
+.sitehead .brand{color:#fff}
+.chip-un{background:#fff;color:var(--ink)}
+.navlinks a{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.navlinks a:hover{background:rgba(255,255,255,.14);border-color:var(--spark);color:#fff}
+
+/* ヒーロー：濃紺＋光＋方眼 */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(640px 420px at 85% 20%,rgba(76,74,228,.55),transparent 70%),
+    radial-gradient(520px 320px at 8% 95%,rgba(245,166,35,.18),transparent 70%),
+    var(--hero-bg);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:48px 48px;
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+          mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+}
+.hero .wrap{position:relative}
+.hero h1{color:#fff}
+.hero h1 em{
+  background:linear-gradient(90deg,#9C9AFF,#F5A623);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .lede,.hero .micro{color:rgba(255,255,255,.72)}
+.hero .btn{background:var(--spark);color:#2A1D00;box-shadow:0 10px 28px rgba(245,166,35,.35)}
+.hero .btn:hover{background:#FFB940}
+.hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.hero .btn-ghost:hover{border-color:#fff}
+.hero-main{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15);color:#fff}
+.hero-main-sub{color:rgba(255,255,255,.65)}
+.logpanel{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);
+  backdrop-filter:blur(12px);
+  box-shadow:0 30px 80px -20px rgba(76,74,228,.65);
+}
+
+/* 見出し：大きく太く、ラベルに線 */
+section h2{
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;
+  font-size:clamp(26px,3.4vw,38px);line-height:1.35;letter-spacing:.01em;
+}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:32px;height:2px;background:linear-gradient(90deg,var(--indigo),var(--spark))}
+
+/* セクションを交互に白で区切る */
+section:nth-of-type(even){background:#fff}
+
+/* カードに浮き上がる動き */
+.uses-grid > *, .log-item, details.finding, details.qa-item{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.uses-grid > *:hover, .log-item:hover, details.finding:hover{
+  transform:translateY(-4px);
+  border-color:var(--indigo);
+  box-shadow:0 18px 40px -18px rgba(34,30,94,.35);
+}
+
+/* 動きが苦手な人の設定に合わせる */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
 </head>
 <body id="top">
 
