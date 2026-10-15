@@ -26,6 +26,13 @@ body{font-family:"Noto Sans JP",sans-serif;background:#F7F7F4;color:#1A1D23;min-
 .soon{opacity:.55}
 .soon .tag{background:#ececef;color:#8a8f9c}
 .soon .btn-skill{background:#ECECEF;color:#8a8f9c;pointer-events:none;box-shadow:none}
+.demo{background:#fff;border:1px solid #E4E5EA;border-radius:18px;padding:22px 20px;margin-bottom:16px}
+.demo .bub{max-width:86%;padding:12px 18px;border-radius:16px;font-size:14px;line-height:1.7;margin-bottom:10px}
+.demo .u{background:#F5A623;color:#3B2A00;font-weight:700;margin-left:auto;border-bottom-right-radius:4px}
+.demo .a{background:#F0F1F4;color:#1A1D23;border-bottom-left-radius:4px}
+.btn-go{display:block;text-align:center;background:#F5A623;color:#3B2A00;font-weight:900;font-size:17px;padding:15px 20px;border-radius:999px;text-decoration:none;box-shadow:0 6px 18px rgba(245,166,35,.4);margin-top:14px}
+.btn-sub{display:block;text-align:center;font-size:13px;font-weight:700;color:#4C4AE4;text-decoration:none;margin-top:10px}
+html{scroll-behavior:smooth}
 .micro{font-size:11.5px;color:#8a8f9c;margin:14px 0;line-height:1.9}
 .ftr{font-size:11px;color:#8a8f9c;text-align:center;line-height:1.9;margin-top:12px}
 .ftr a{color:#4C4AE4}
@@ -35,12 +42,17 @@ body{font-family:"Noto Sans JP",sans-serif;background:#F7F7F4;color:#1A1D23;min-
 <div class="app">
   <div class="hdr">
     <div class="logo">スキル <b>置き場</b></div>
-    <p><p><strong>AIに「あの作業、またやって」と頼むだけで、手順を覚えた状態で動き出す——それがスキルです。</strong></p>
-<p>例えば「別のチャットで作ったゲームを取り出して」と一言言うだけで、AIが探して、テストして、公開まで進みます。毎回やり方を説明し直す必要はありません。</p>
-<p>↓ 下の5枚は、その「手順書」のセット。全部無料で、あなたのGensparkに入れられます。</p></p>
+    <p>AIに「あの作業、またやって」と頼むだけで、<b>手順を覚えた状態で動き出す</b>——それがスキル。下の5枚はその手順書で、全部無料です。</p>
   </div>
 
-  <div class="howto">
+  <div class="demo">
+    <div class="bub u">別のチャットで作ったゲーム、取り出して</div>
+    <div class="bub a">見つけました。回収して、動作テストして、公開まで終わりました。<br>👉 <b>https://…/ai-play/neon-strike.html</b></div>
+    <a class="btn-go" href="#how">↓ まずは入れ方を見る（3分）</a>
+    <a class="btn-sub" href="#list">5本のスキルを見る →</a>
+  </div>
+
+  <div class="howto" id="how">
     <h2>入れ方（どれも共通・3ステップ）</h2>
     <ol>
       <li>カードのボタンから、スキルのファイルを保存する</li>
@@ -49,7 +61,7 @@ body{font-family:"Noto Sans JP",sans-serif;background:#F7F7F4;color:#1A1D23;min-
     </ol>
   </div>
 
-  <div class="card">
+  <div class="card" id="list">
     <span class="tag">チャット・ファイル</span>
     <h2>ai-chat-rescue（別チャット回収）</h2>
     <p><strong>できること：</strong>「別のチャットで作ったゲームを取り出して」と言うだけで、AIが過去のチャットを探して、中身を回収し、ブラウザで遊べる形にしてくれます。<br><strong>ビフォー：</strong>作ったゲームがチャットの中で止まってる → <strong>アフター：</strong>URLが発行されて、誰でも遊べる。</p>
