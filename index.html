@@ -529,7 +529,13 @@ section:nth-of-type(even){background:#fff}
 #gp-affi-top .gpbtn:hover{filter:brightness(1.1)}
 </style>
 <a id="gp-affi-top" href="https://mainfuncpteltd.sjv.io/3kxrvn" target="_blank" rel="sponsored noopener"><span class="gpbtn"><b>Genspark</b> を無料ではじめる →</span></a>
-
+<div class="gpschbox" style="position:relative;max-width:680px;margin:10px auto 0;padding:0 16px"><input id="gpq" type="search" placeholder="このサイト内を検索" style="width:100%;padding:12px 18px;border:2px solid #1A1D23;border-radius:999px;font-size:15px;font-weight:700;font-family:inherit;outline:none;box-sizing:border-box;background:#fff"><div id="gpr" style="display:none;position:absolute;left:16px;right:16px;top:52px;background:#fff;border:1px solid #d8dade;border-radius:12px;overflow:hidden;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.12)"></div></div><script>(function(){var IDX=[{"t": "Gensparkでできること100｜50代でもできる、まかせ先リスト｜まかせるAI生活", "u": "dekikoto-100.html", "d": ""}, {"t": "まかせるAI生活（非公認）｜50代でもできる、Gensparkのまかせ方", "u": "index.html", "d": ""}, {"t": "スキル置き場｜まかせるAI生活（非公認）", "u": "skills.html", "d": ""}];var q=document.getElementById('gpq'),r=document.getElementById('gpr');if(!q)return;
+function esc(s){return s.replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();if(!v){r.style.display='none';r.innerHTML='';return}
+var m=IDX.filter(function(x){return (x.t+' '+(x.d||'')).toLowerCase().indexOf(v)>=0});
+r.innerHTML=m.length?m.map(function(x){return '<a href=\"'+x.u+'\" style=\"display:block;padding:12px 16px;border-bottom:1px solid #eee;text-decoration:none;color:#1A1D23\"><b style=\"font-size:14px\">'+esc(x.t)+'</b>'+(x.d?'<br><span style=\"font-size:12px;color:#5B6172\">'+esc(x.d)+'</span>':'')+'</a>'}).join(''):'<div style=\"padding:12px 16px;font-size:13px;color:#5B6172\">見つかりません</div>';
+r.style.display='block'});
+document.addEventListener('click',function(e){if(r.contains(e.target)||e.target===q)return;r.style.display='none'})})();</script>
 <div class="sisters-bar" style="background:#1A1D23;"><div style="max-width:1080px;margin:0 auto;padding:9px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:14px;"><span style="color:#F5A623;font-weight:700;letter-spacing:.05em;">姉妹サイト</span><a href="https://gp20190917-beep.github.io/ai-times/" style="color:#fff;text-decoration:none;"><b>まかせるAI TIMES</b><span style="opacity:.75;">｜AIニュース集約</span></a><a href="https://gp20190917-beep.github.io/ai-play/" style="color:#fff;text-decoration:none;"><b>まかせるAI PLAY</b><span style="opacity:.75;">｜ゲーム置き場</span></a><a href="https://gp20190917-beep.github.io/ai-gaku/" style="color:#fff;text-decoration:none;"><b>まかせるAI GAKU</b><span style="opacity:.75;">｜AIの学び場</span></a></div></div>
 
 
